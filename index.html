@@ -1,438 +1,266 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="過去問">
-<meta name="theme-color" content="#E4E2DA">
-<title>司法書士 学習カレンダー 2026.7 – 2027.7</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<html lang="ja"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="過去問">
+<meta name="theme-color" content="#E4E2DA"><title>司法書士 学習カレンダー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{--paper:#E4E2DA;--paper-2:#EDEBE4;--ink:#16181C;--ink-60:rgba(22,24,28,.6);
-  --ink-35:rgba(22,24,28,.35);--rule:rgba(22,24,28,.14);--shu:#A6392E;--ao:#2F6B5E;--fuji:#4B3F72;}
+--ink-35:rgba(22,24,28,.35);--rule:rgba(22,24,28,.14);--shu:#A6392E;--ao:#2F6B5E;--cha:#8C6A4A;}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{-webkit-text-size-adjust:100%}
 body{background:var(--paper);color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;
-  font-feature-settings:"tnum" 1;line-height:1.5;padding:22px 14px 70px;max-width:1120px;margin:0 auto}
-.mincho,h1,h2{font-family:"Shippori Mincho B1","Zen Kaku Gothic New",serif}
-button{font:inherit;color:inherit;cursor:pointer}
-:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
-
-header{border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:16px}
-.eyebrow{font-size:11px;letter-spacing:.22em;color:var(--ink-60);margin-bottom:6px}
-h1{font-size:clamp(20px,5vw,29px);font-weight:700;letter-spacing:.02em}
-.meta{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:12px;color:var(--ink-60)}
-.meta b{color:var(--ink);font-weight:700}
-
-/* 本試験カウントダウン */
-.count{display:flex;align-items:baseline;gap:10px;border-left:3px solid var(--shu);
-  padding:6px 0 6px 11px;margin-bottom:18px}
-.count .n{font-family:"Shippori Mincho B1",serif;font-size:32px;font-weight:700;letter-spacing:-.02em;line-height:1}
-.count .l{font-size:11px;color:var(--ink-60)}
-.count .l b{color:var(--ink)}
-
-.shelf-wrap{margin:0 0 18px}
-.shelf-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px}
-.shelf-head h2{font-size:13px;font-weight:500;letter-spacing:.14em}
-.shelf-head span{font-size:11px;color:var(--ink-60)}
-.shelf{display:flex;gap:2px;height:70px}
-.spine{position:relative;border-radius:1px;overflow:hidden;min-width:9px;
-  display:flex;align-items:flex-end;justify-content:center;padding-bottom:5px}
-.spine .fill{position:absolute;left:0;top:0;width:100%;background:rgba(255,255,255,.72);mix-blend-mode:screen}
-.spine .no{position:relative;color:#fff;font-size:10px;font-weight:700;opacity:.92}
-.spine .vt{position:absolute;top:5px;left:50%;transform:translateX(-50%);writing-mode:vertical-rl;
-  color:#fff;font-size:9.5px;letter-spacing:.06em;opacity:.85;font-family:"Shippori Mincho B1",serif;
-  white-space:nowrap;overflow:hidden;max-height:48px}
-.shelf-note{font-size:11px;color:var(--ink-35);margin-top:6px}
-@media (prefers-reduced-motion:no-preference){.spine .fill{transition:height .8s cubic-bezier(.2,.7,.3,1)}}
-
-.track{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--ink);margin-bottom:16px}
-.track>div{padding:9px 10px;border-right:1px solid var(--rule)}
-.track>div:last-child{border-right:0}
-.track .k{font-size:10px;letter-spacing:.14em;color:var(--ink-60);margin-bottom:3px}
-.track .v{font-family:"Shippori Mincho B1",serif;font-size:19px;font-weight:700}
-.track .v small{font-size:10px;font-weight:400;color:var(--ink-35);margin-left:2px}
-.track .note{font-size:10px;color:var(--ink-35);margin-top:2px}
-.track .gap .v{color:var(--shu)} .track .gap.ahead .v{color:var(--ao)} .track .gap.even .v{color:var(--ink)}
-
-.panel{border:1px solid var(--rule);background:var(--paper-2);padding:11px 12px;margin-bottom:16px}
-.p-date{font-size:12px;color:var(--ink-60);margin-bottom:6px}
+font-feature-settings:"tnum" 1;line-height:1.5;padding:20px 14px 70px;max-width:1120px;margin:0 auto}
+.mincho,h1,h2{font-family:"Shippori Mincho B1",serif}
+button{font:inherit;color:inherit;cursor:pointer}:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
+header{border-bottom:2px solid var(--ink);padding-bottom:12px;margin-bottom:14px}
+.eyebrow{font-size:11px;letter-spacing:.2em;color:var(--ink-60);margin-bottom:5px}
+h1{font-size:clamp(20px,5vw,28px);font-weight:700}
+.count{display:flex;align-items:baseline;gap:10px;border-left:3px solid var(--shu);padding:6px 0 6px 11px;margin:14px 0}
+.count .n{font-family:"Shippori Mincho B1",serif;font-size:30px;font-weight:700;line-height:1}
+.count .l{font-size:11px;color:var(--ink-60)}.count .l b{color:var(--ink)}
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.lane{border:1px solid var(--ink);padding:9px 10px}
+.lane h3{font-size:10px;letter-spacing:.14em;color:var(--ink-60);font-weight:500;margin-bottom:5px}
+.lane .v{font-family:"Shippori Mincho B1",serif;font-size:17px;font-weight:700}
+.lane .v small{font-size:10px;font-weight:400;color:var(--ink-35);margin-left:2px}
+.lane .s{font-size:10px;color:var(--ink-35);margin-top:3px;line-height:1.35}
+.panel{border:1px solid var(--rule);background:var(--paper-2);padding:10px 12px;margin-bottom:14px}
+.p-date{font-size:12px;color:var(--ink-60);margin-bottom:5px}
 .p-date b{color:var(--ink);font-size:15px;font-family:"Shippori Mincho B1",serif}
+.sec{font-size:9.5px;letter-spacing:.12em;color:var(--ink-35);margin:7px 0 3px;padding-top:6px;border-top:1px dotted var(--rule)}
+.sec:first-of-type{border-top:0;padding-top:0}
 .d-row{display:flex;align-items:center;gap:8px;font-size:13px;padding:2px 0}
 .d-row i{width:3px;height:15px;border-radius:1px;flex:none}
-.d-row .rng{font-weight:700;margin-left:auto;white-space:nowrap}
-.e-row{display:flex;gap:9px;align-items:flex-start;padding:5px 0;border-top:1px dotted var(--rule)}
-.e-row:first-of-type{border-top:0}
-.e-row .tm{font-size:11px;color:var(--ink-60);width:44px;flex:none;padding-top:2px}
-.e-row .bd{flex:1}
-.e-row .ti{font-size:13px;font-weight:700}
-.e-row .sb{font-size:11px;color:var(--ink-35);line-height:1.35}
-.e-row .tg{background:transparent;border:1px solid var(--rule);font-size:10px;padding:3px 8px;color:var(--ink-60);flex:none}
-.e-row .tg[aria-pressed="true"]{background:var(--ao);border-color:var(--ao);color:#fff}
-.rec{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:10px;padding-top:9px;border-top:1px dotted var(--rule)}
-.rec button{background:transparent;border:1px solid var(--ink);padding:5px 12px;font-size:12px}
+.d-row .rng{font-weight:700;margin-left:auto;white-space:nowrap;font-size:12px}
+.d-row .tg{background:transparent;border:1px solid var(--rule);font-size:10px;padding:3px 9px;color:var(--ink-60);flex:none;margin-left:auto}
+.d-row .tg[aria-pressed="true"]{background:var(--ao);border-color:var(--ao);color:#fff}
+.rec{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:9px;padding-top:8px;border-top:1px dotted var(--rule)}
+.rec button{background:transparent;border:1px solid var(--ink);padding:5px 11px;font-size:12px}
 .rec button.primary{background:var(--ink);color:var(--paper)}
 .rec button.ghost{border-color:var(--rule);color:var(--ink-60)}
-.rec .prog{font-size:12px;color:var(--ink-60);margin-left:auto}
-.rec .prog b{color:var(--ink);font-size:14px}
-
-.tabs{display:flex;border:1px solid var(--ink);width:fit-content;margin-bottom:14px;flex-wrap:wrap}
-.tabs button{background:transparent;border:0;border-right:1px solid var(--ink);font-size:12px;padding:6px 13px}
+.rec .prog{font-size:12px;color:var(--ink-60);margin-left:auto}.rec .prog b{font-size:14px;color:var(--ink)}
+.tabs{display:flex;border:1px solid var(--ink);width:fit-content;margin-bottom:12px}
+.tabs button{background:transparent;border:0;border-right:1px solid var(--ink);font-size:12px;padding:6px 14px}
 .tabs button:last-child{border-right:0}
 .tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
-
-.month{margin-bottom:24px}
+.month{margin-bottom:22px}
 .month h2{font-size:15px;letter-spacing:.1em;padding-bottom:5px;border-bottom:1px solid var(--ink);margin-bottom:6px}
 .dow,.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
-.dow div{font-size:10px;color:var(--ink-35);text-align:center;padding:2px 0}
-.dow div:first-child{color:var(--shu)}
+.dow div{font-size:10px;color:var(--ink-35);text-align:center;padding:2px 0}.dow div:first-child{color:var(--shu)}
 .cell{position:relative;background:var(--paper-2);border:1px solid transparent;aspect-ratio:1/1.06;
-  padding:3px 3px 3px 6px;overflow:hidden;text-align:left;display:flex;flex-direction:column}
-.cell.off{background:transparent}
-.cell.blank{background:transparent;box-shadow:inset 0 0 0 1px rgba(22,24,28,.05)}
-.cell .bars{position:absolute;left:0;top:0;bottom:0;width:3px;display:flex;flex-direction:column}
+padding:3px 3px 3px 5px;overflow:hidden;text-align:left;display:flex;flex-direction:column;gap:1px}
+.cell.off,.cell.blank{background:transparent}
+.cell.blank{box-shadow:inset 0 0 0 1px rgba(22,24,28,.05)}
 .cell .dnum{font-size:11px;font-weight:500;color:var(--ink-60);font-family:"Shippori Mincho B1",serif}
 .cell.sun .dnum{color:var(--shu)}
-.cell .qty{margin-top:auto;font-size:13px;font-weight:700}
-.cell .qty small{font-size:9px;font-weight:400;color:var(--ink-35)}
-.cell .vols{font-size:9px;color:var(--ink-35);letter-spacing:-.05em;line-height:1.2}
-.cell[aria-pressed="true"]{border-color:var(--ink)}
-.cell .mark{position:absolute;right:3px;top:2px;font-size:8px;color:var(--ink-35);font-family:"Shippori Mincho B1",serif}
-.cell.part .mark{color:var(--shu)}
-.cell.done{background:transparent;box-shadow:inset 0 0 0 1px var(--rule)}
-.cell.done .dnum,.cell.done .qty{color:var(--ink-35)}
-.cell.done .qty{text-decoration:line-through}
-.cell.done .bars{opacity:.35}
-.cell.done .mark{color:var(--ao);font-weight:700}
-.cell.today::after{content:"";position:absolute;inset:2px;border:1.5px solid var(--shu);pointer-events:none}
+.cell .row{display:flex;align-items:center;gap:2px;font-size:9px;line-height:1.25}
+.cell .row b{font-weight:700;font-size:10px}
+.cell .row .dot{width:3px;height:9px;border-radius:1px;flex:none}
 .cell .ev{margin-top:auto;display:flex;flex-direction:column;gap:1px}
-.cell .ev span{font-size:8.5px;line-height:1.25;letter-spacing:-.04em;color:#fff;background:var(--fuji);
-  padding:1px 2px;border-radius:1px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.cell .ev span.moshi{background:var(--shu)}
-.cell .ev span.honshi{background:var(--shu);font-weight:700}
-.cell.evdone .ev span{opacity:.35}
-.cell.honshiDay{background:var(--shu)}
-.cell.honshiDay .dnum{color:#fff}
-
-.list,.sched{display:none} .list.on,.sched.on{display:block} .cal.off{display:none}
-.jump{display:flex;gap:7px;margin-bottom:12px;flex-wrap:wrap}
-.jump button{background:transparent;border:1px solid var(--rule);color:var(--ink-60);font-size:11px;padding:5px 11px}
-.lweek{margin-bottom:18px}
-.lweek>h3{font-size:11px;color:var(--ink-60);font-weight:500;letter-spacing:.1em;
-  border-top:1px solid var(--ink);padding-top:6px;margin-bottom:8px}
-.lday{border-bottom:1px dotted var(--rule);padding:7px 0 9px}
-.lday.isToday{background:linear-gradient(90deg,rgba(166,57,46,.07),transparent 60%);
-  box-shadow:inset 3px 0 0 var(--shu);padding-left:8px}
-.lhead{display:flex;align-items:baseline;gap:8px;margin-bottom:5px}
-.lhead .ld{font-size:12px;color:var(--ink-60);width:64px;flex:none}
+.cell .ev span{font-size:8px;line-height:1.25;letter-spacing:-.04em;color:#fff;background:#4B3F72;
+padding:1px 2px;border-radius:1px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.cell .ev span.kijutsu{background:var(--cha)}.cell .ev span.moshi,.cell .ev span.honshi{background:var(--shu)}
+.cell[aria-pressed="true"]{border-color:var(--ink)}
+.cell.today::after{content:"";position:absolute;inset:2px;border:1.5px solid var(--shu);pointer-events:none}
+.cell .done1{position:absolute;right:3px;top:2px;font-size:8px;color:var(--ao);font-weight:700;font-family:"Shippori Mincho B1",serif}
+.view{display:none}.view.on{display:block}
+.jump{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+.jump button{background:transparent;border:1px solid var(--rule);color:var(--ink-60);font-size:11px;padding:5px 10px}
+.grp{margin-bottom:18px}
+.grp>h3{font-size:12px;letter-spacing:.08em;border-top:1px solid var(--ink);padding-top:6px;margin-bottom:2px}
+.grp .cap{font-size:10px;color:var(--ink-35);margin-bottom:6px}
+.lday{border-bottom:1px dotted var(--rule);padding:6px 0 8px}
+.lday.isToday{background:linear-gradient(90deg,rgba(166,57,46,.07),transparent 60%);box-shadow:inset 3px 0 0 var(--shu);padding-left:8px}
+.lhead{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+.lhead .ld{font-size:11px;color:var(--ink-60);width:62px;flex:none}
 .lhead .lt{font-size:11px;color:var(--ink-35);flex:1;line-height:1.35}
-.lhead .lc{font-size:12px;font-weight:700;white-space:nowrap}
-.lhead .lc.full{color:var(--ao)}
+.lhead .lc{font-size:12px;font-weight:700;white-space:nowrap}.lhead .lc.full{color:var(--ao)}
 .lhead .all{background:transparent;border:1px solid var(--rule);font-size:10px;padding:2px 7px;color:var(--ink-60)}
 .chips{display:flex;flex-wrap:wrap;gap:3px}
-.chip{width:31px;height:26px;border:1px solid var(--rule);background:var(--paper-2);
-  font-size:10px;color:var(--ink-60);border-radius:2px;display:flex;align-items:center;justify-content:center;padding:0}
+.chip{width:31px;height:26px;border:1px solid var(--rule);background:var(--paper-2);font-size:10px;
+color:var(--ink-60);border-radius:2px;display:flex;align-items:center;justify-content:center;padding:0}
 .chip[aria-checked="true"]{color:#fff;border-color:transparent;font-weight:700}
-.secmark{width:100%;font-size:9.5px;color:var(--ink-35);margin:4px 0 1px;letter-spacing:.04em}
-@media (prefers-reduced-motion:no-preference){.chip{transition:background-color .12s,color .12s}}
-
-/* 答練・模試リスト */
-.sgrp{margin-bottom:16px}
-.sgrp h3{font-size:12px;letter-spacing:.08em;border-top:1px solid var(--ink);padding-top:6px;margin-bottom:2px}
-.sgrp .cap{font-size:10px;color:var(--ink-35);margin-bottom:6px}
+.secmark{width:100%;font-size:9.5px;color:var(--ink-35);margin:4px 0 1px}
 .srow{display:flex;gap:9px;align-items:center;padding:6px 0;border-bottom:1px dotted var(--rule);font-size:13px}
 .srow.done{color:var(--ink-35)}
-.srow .sd{width:88px;flex:none;font-size:11px;color:var(--ink-60)}
-.srow .st{flex:1}
-.srow .st em{font-style:normal;font-size:10.5px;color:var(--ink-35);display:block}
+.srow .sd{width:84px;flex:none;font-size:11px;color:var(--ink-60)}
+.srow .st{flex:1}.srow .st em{font-style:normal;font-size:10.5px;color:var(--ink-35);display:block}
 .srow .sb{background:transparent;border:1px solid var(--rule);font-size:10px;padding:3px 9px;color:var(--ink-60);flex:none}
 .srow .sb[aria-pressed="true"]{background:var(--ao);border-color:var(--ao);color:#fff}
-
-footer{margin-top:26px;padding-top:12px;border-top:1px solid var(--rule);display:flex;
-  justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-footer p{font-size:11px;color:var(--ink-35)}
-footer .btns{display:flex;gap:6px}
+.note{font-size:11px;color:var(--ink-35);line-height:1.5;padding:8px 0}
+footer{margin-top:24px;padding-top:12px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+footer p{font-size:11px;color:var(--ink-35)}footer .btns{display:flex;gap:6px}
 footer button{background:transparent;border:1px solid var(--rule);color:var(--ink-60);font-size:11px;padding:5px 10px}
-@media (max-width:520px){
-  .cell{padding:2px 2px 2px 5px}.cell .qty{font-size:11px}.cell .vols{display:none}
-  .cell .ev span{font-size:7.5px}
-  .chip{width:30px;height:28px}
-  .lhead{flex-wrap:wrap}.lhead .lt{width:100%;order:3}
-  .srow{flex-wrap:wrap}.srow .st{width:100%;order:3}
-}
-</style>
-</head>
-<body>
-<header>
-  <div class="eyebrow">過去問1周目 ＋ LEC精撰答練フルパック（水道橋本校・日曜クラス）</div>
-  <h1>司法書士 学習カレンダー</h1>
-  <div class="meta"><div>過去問 <b>7/18 — 9/30</b></div><div>平日16問・土日23問</div>
-    <div>答練 <b>全40回</b></div><div>模試 <b>全4回</b></div><div>予備日 <b>10/1 — 10/31</b></div></div>
-</header>
-
+@media (max-width:520px){.cell{padding:2px 2px 2px 4px}.cell .row{font-size:8px}.cell .row b{font-size:9px}
+.chip{width:30px;height:28px}.lhead{flex-wrap:wrap}.lhead .lt{width:100%;order:3}
+.srow{flex-wrap:wrap}.srow .st{width:100%;order:3}.lanes{grid-template-columns:1fr}}
+</style></head><body>
+<header><div class="eyebrow">パーフェクト過去問題集 ＋ LEC答練（水道橋・日曜）</div>
+<h1>司法書士 学習カレンダー</h1></header>
 <div class="count" id="count"></div>
-
-<section class="shelf-wrap">
-  <div class="shelf-head"><h2 class="mincho">10巻の進み方</h2><span>幅＝問題数／白い部分＝終了済み</span></div>
-  <div class="shelf" id="shelf"></div>
-  <div class="shelf-note" id="shelfNote"></div>
-</section>
-
-<div class="track" id="track"></div>
+<div class="lanes" id="lanes"></div>
 <div class="panel" id="panel" aria-live="polite"></div>
-
 <div class="tabs" role="tablist">
-  <button id="tabCal" role="tab" aria-selected="true">カレンダー</button>
-  <button id="tabList" role="tab" aria-selected="false">過去問リスト</button>
-  <button id="tabSched" role="tab" aria-selected="false">答練・模試</button>
-</div>
-
-<div class="cal" id="cal"></div>
-<div class="list" id="list"></div>
-<div class="sched" id="sched"></div>
-
-<footer>
-  <p id="status">読み込み中…</p>
-  <span class="btns">
-    <button id="exp">記録をコピー</button><button id="imp">記録を読み込む</button><button id="reset">すべて消す</button>
-  </span>
-</footer>
-
+<button role="tab" aria-selected="true">カレンダー</button>
+<button role="tab" aria-selected="false">机・1周目／記述</button>
+<button role="tab" aria-selected="false">隙間・2/3周目</button></div>
+<div class="view on" id="v0"></div><div class="view" id="v1"></div><div class="view" id="v2"></div>
+<footer><p id="status">読み込み中…</p><span class="btns">
+<button id="exp">記録をコピー</button><button id="imp">読み込む</button><button id="rst">消す</button></span></footer>
 <script>
-const DATA = {"days": [{"date": "2026-07-18", "count": 23, "chunks": [{"vol": 2, "sec": "担保物権", "from": 50, "to": 72}]}, {"date": "2026-07-19", "count": 23, "chunks": [{"vol": 2, "sec": "担保物権", "from": 73, "to": 95}]}, {"date": "2026-07-20", "count": 16, "chunks": [{"vol": 2, "sec": "担保物権", "from": 96, "to": 111}]}, {"date": "2026-07-21", "count": 16, "chunks": [{"vol": 2, "sec": "担保物権", "from": 112, "to": 123}, {"vol": 3, "sec": "親族", "from": 1, "to": 4}]}, {"date": "2026-07-22", "count": 16, "chunks": [{"vol": 3, "sec": "親族", "from": 5, "to": 20}]}, {"date": "2026-07-23", "count": 16, "chunks": [{"vol": 3, "sec": "親族", "from": 21, "to": 36}]}, {"date": "2026-07-24", "count": 16, "chunks": [{"vol": 3, "sec": "親族", "from": 37, "to": 52}]}, {"date": "2026-07-25", "count": 23, "chunks": [{"vol": 3, "sec": "親族", "from": 53, "to": 55}, {"vol": 3, "sec": "相続", "from": 1, "to": 20}]}, {"date": "2026-07-26", "count": 23, "chunks": [{"vol": 3, "sec": "相続", "from": 21, "to": 43}]}, {"date": "2026-07-27", "count": 16, "chunks": [{"vol": 3, "sec": "相続", "from": 44, "to": 50}, {"vol": 4, "sec": "", "from": 1, "to": 9}]}, {"date": "2026-07-28", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 10, "to": 25}]}, {"date": "2026-07-29", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 26, "to": 41}]}, {"date": "2026-07-30", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 42, "to": 57}]}, {"date": "2026-07-31", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 58, "to": 73}]}, {"date": "2026-08-01", "count": 23, "chunks": [{"vol": 4, "sec": "", "from": 74, "to": 96}]}, {"date": "2026-08-02", "count": 23, "chunks": [{"vol": 4, "sec": "", "from": 97, "to": 119}]}, {"date": "2026-08-03", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 120, "to": 135}]}, {"date": "2026-08-04", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 136, "to": 151}]}, {"date": "2026-08-05", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 152, "to": 167}]}, {"date": "2026-08-06", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 168, "to": 183}]}, {"date": "2026-08-07", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 184, "to": 199}]}, {"date": "2026-08-08", "count": 23, "chunks": [{"vol": 4, "sec": "", "from": 200, "to": 222}]}, {"date": "2026-08-09", "count": 23, "chunks": [{"vol": 4, "sec": "", "from": 223, "to": 230}, {"vol": 5, "sec": "", "from": 1, "to": 15}]}, {"date": "2026-08-10", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 16, "to": 31}]}, {"date": "2026-08-11", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 32, "to": 47}]}, {"date": "2026-08-12", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 48, "to": 63}]}, {"date": "2026-08-13", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 64, "to": 79}]}, {"date": "2026-08-14", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 80, "to": 95}]}, {"date": "2026-08-15", "count": 23, "chunks": [{"vol": 5, "sec": "", "from": 96, "to": 118}]}, {"date": "2026-08-16", "count": 23, "chunks": [{"vol": 5, "sec": "", "from": 119, "to": 141}]}, {"date": "2026-08-17", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 142, "to": 157}]}, {"date": "2026-08-18", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 158, "to": 173}]}, {"date": "2026-08-19", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 174, "to": 186}, {"vol": 6, "sec": "第1編", "from": 1, "to": 3}]}, {"date": "2026-08-20", "count": 16, "chunks": [{"vol": 6, "sec": "第1編", "from": 4, "to": 19}]}, {"date": "2026-08-21", "count": 16, "chunks": [{"vol": 6, "sec": "第1編", "from": 20, "to": 35}]}, {"date": "2026-08-22", "count": 23, "chunks": [{"vol": 6, "sec": "第1編", "from": 36, "to": 58}]}, {"date": "2026-08-23", "count": 23, "chunks": [{"vol": 6, "sec": "第1編", "from": 59, "to": 81}]}, {"date": "2026-08-24", "count": 16, "chunks": [{"vol": 6, "sec": "第1編", "from": 82, "to": 97}]}, {"date": "2026-08-25", "count": 16, "chunks": [{"vol": 6, "sec": "第1編", "from": 98, "to": 109}, {"vol": 6, "sec": "第2編", "from": 1, "to": 4}]}, {"date": "2026-08-26", "count": 16, "chunks": [{"vol": 6, "sec": "第2編", "from": 5, "to": 18}, {"vol": 6, "sec": "第3編", "from": 1, "to": 2}]}, {"date": "2026-08-27", "count": 16, "chunks": [{"vol": 6, "sec": "第3編", "from": 3, "to": 7}, {"vol": 6, "sec": "第4編", "from": 1, "to": 11}]}, {"date": "2026-08-28", "count": 16, "chunks": [{"vol": 6, "sec": "第4編", "from": 12, "to": 17}, {"vol": 6, "sec": "第5編", "from": 1, "to": 9}, {"vol": 6, "sec": "第6編", "from": 1, "to": 1}]}, {"date": "2026-08-29", "count": 23, "chunks": [{"vol": 6, "sec": "第6編", "from": 2, "to": 14}, {"vol": 7, "sec": "", "from": 1, "to": 10}]}, {"date": "2026-08-30", "count": 23, "chunks": [{"vol": 7, "sec": "", "from": 11, "to": 33}]}, {"date": "2026-08-31", "count": 16, "chunks": [{"vol": 7, "sec": "", "from": 34, "to": 49}]}, {"date": "2026-09-01", "count": 16, "chunks": [{"vol": 7, "sec": "", "from": 50, "to": 65}]}, {"date": "2026-09-02", "count": 16, "chunks": [{"vol": 7, "sec": "", "from": 66, "to": 81}]}, {"date": "2026-09-03", "count": 16, "chunks": [{"vol": 7, "sec": "", "from": 82, "to": 97}]}, {"date": "2026-09-04", "count": 16, "chunks": [{"vol": 7, "sec": "", "from": 98, "to": 113}]}, {"date": "2026-09-05", "count": 23, "chunks": [{"vol": 7, "sec": "", "from": 114, "to": 136}]}, {"date": "2026-09-06", "count": 23, "chunks": [{"vol": 7, "sec": "", "from": 137, "to": 141}, {"vol": 8, "sec": "民事訴訟法", "from": 1, "to": 18}]}, {"date": "2026-09-07", "count": 16, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 19, "to": 34}]}, {"date": "2026-09-08", "count": 16, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 35, "to": 50}]}, {"date": "2026-09-09", "count": 16, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 51, "to": 66}]}, {"date": "2026-09-10", "count": 16, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 67, "to": 82}]}, {"date": "2026-09-11", "count": 16, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 83, "to": 98}]}, {"date": "2026-09-12", "count": 23, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 99, "to": 121}]}, {"date": "2026-09-13", "count": 23, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 122, "to": 130}, {"vol": 8, "sec": "民事執行法", "from": 1, "to": 14}]}, {"date": "2026-09-14", "count": 16, "chunks": [{"vol": 8, "sec": "民事執行法", "from": 15, "to": 26}, {"vol": 8, "sec": "民事保全法", "from": 1, "to": 4}]}, {"date": "2026-09-15", "count": 16, "chunks": [{"vol": 8, "sec": "民事保全法", "from": 5, "to": 20}]}, {"date": "2026-09-16", "count": 16, "chunks": [{"vol": 8, "sec": "民事保全法", "from": 21, "to": 26}, {"vol": 9, "sec": "供託法", "from": 1, "to": 10}]}, {"date": "2026-09-17", "count": 16, "chunks": [{"vol": 9, "sec": "供託法", "from": 11, "to": 26}]}, {"date": "2026-09-18", "count": 16, "chunks": [{"vol": 9, "sec": "供託法", "from": 27, "to": 42}]}, {"date": "2026-09-19", "count": 23, "chunks": [{"vol": 9, "sec": "供託法", "from": 43, "to": 65}]}, {"date": "2026-09-20", "count": 23, "chunks": [{"vol": 9, "sec": "供託法", "from": 66, "to": 78}, {"vol": 9, "sec": "司法書士法", "from": 1, "to": 10}]}, {"date": "2026-09-21", "count": 16, "chunks": [{"vol": 9, "sec": "司法書士法", "from": 11, "to": 23}, {"vol": 10, "sec": "刑法", "from": 1, "to": 3}]}, {"date": "2026-09-22", "count": 16, "chunks": [{"vol": 10, "sec": "刑法", "from": 4, "to": 19}]}, {"date": "2026-09-23", "count": 16, "chunks": [{"vol": 10, "sec": "刑法", "from": 20, "to": 35}]}, {"date": "2026-09-24", "count": 16, "chunks": [{"vol": 10, "sec": "刑法", "from": 36, "to": 51}]}, {"date": "2026-09-25", "count": 16, "chunks": [{"vol": 10, "sec": "刑法", "from": 52, "to": 67}]}, {"date": "2026-09-26", "count": 23, "chunks": [{"vol": 10, "sec": "刑法", "from": 68, "to": 81}, {"vol": 10, "sec": "憲法", "from": 1, "to": 9}]}, {"date": "2026-09-27", "count": 23, "chunks": [{"vol": 10, "sec": "憲法", "from": 10, "to": 32}]}, {"date": "2026-09-28", "count": 16, "chunks": [{"vol": 10, "sec": "憲法", "from": 33, "to": 48}]}, {"date": "2026-09-29", "count": 16, "chunks": [{"vol": 10, "sec": "憲法", "from": 49, "to": 64}]}, {"date": "2026-09-30", "count": 5, "chunks": [{"vol": 10, "sec": "憲法", "from": 65, "to": 69}]}], "vol": {"1": {"name": "民法〈総則・債権〉", "total": 186, "color": "#8C6A4A"}, "2": {"name": "民法〈物権・担保物権〉", "total": 232, "color": "#A6392E"}, "3": {"name": "民法〈親族・相続〉", "total": 105, "color": "#B5793A"}, "4": {"name": "不動産登記法Ⅰ", "total": 230, "color": "#4F6B3A"}, "5": {"name": "不動産登記法Ⅱ", "total": 186, "color": "#2F6B5E"}, "6": {"name": "商法・会社法", "total": 174, "color": "#2F4E7E"}, "7": {"name": "商業登記法", "total": 141, "color": "#4B3F72"}, "8": {"name": "民事訴訟法・民事執行法・民事保全法", "total": 182, "color": "#7A3A5E"}, "9": {"name": "供託法・司法書士法", "total": 101, "color": "#6B6B4F"}, "10": {"name": "刑法・憲法", "total": 150, "color": "#3A3D45"}}, "done": {"1": 186, "2": 158}, "events": [{"date": "2026-10-11", "kind": "tanren", "title": "必須論点択一編 第1回", "time": "10:30", "sub": "民法／択一30問"}, {"date": "2026-10-11", "kind": "tanren", "title": "頻出論点記述編 第1回", "time": "13:30", "sub": "記述 不登法・商登法 各1問"}, {"date": "2026-10-18", "kind": "tanren", "title": "必須論点択一編 第2回", "time": "10:30", "sub": "民法／択一30問"}, {"date": "2026-10-18", "kind": "tanren", "title": "頻出論点記述編 第2回", "time": "13:30", "sub": "記述 不登法・商登法 各1問"}, {"date": "2026-10-25", "kind": "tanren", "title": "必須論点択一編 第3回", "time": "10:30", "sub": "民法／択一30問"}, {"date": "2026-10-25", "kind": "tanren", "title": "頻出論点記述編 第3回", "time": "13:30", "sub": "記述 不登法・商登法 各1問"}, {"date": "2026-11-01", "kind": "tanren", "title": "必須論点択一編 第4回", "time": "10:30", "sub": "不登法／択一30問"}, {"date": "2026-11-01", "kind": "tanren", "title": "頻出論点記述編 第4回", "time": "13:30", "sub": "記述 不登法・商登法 各1問"}, {"date": "2026-11-08", "kind": "tanren", "title": "必須論点択一編 第5回", "time": "10:30", "sub": "不登法／択一30問"}, {"date": "2026-11-08", "kind": "tanren", "title": "頻出論点記述編 第5回", "time": "13:30", "sub": "記述 不登法・商登法 各1問"}, {"date": "2026-11-15", "kind": "tanren", "title": "必須論点択一編 第6回", "time": "10:30", "sub": "会社法／択一30問"}, {"date": "2026-11-15", "kind": "tanren", "title": "頻出論点記述編 第6回", "time": "13:30", "sub": "記述 不登法・商登法 各1問"}, {"date": "2026-11-22", "kind": "tanren", "title": "必須論点択一編 第7回", "time": "10:30", "sub": "会社法・商法・商登法／択一30問"}, {"date": "2026-11-22", "kind": "tanren", "title": "頻出論点記述編 第7回", "time": "13:30", "sub": "記述 不登法・商登法 各1問"}, {"date": "2026-11-29", "kind": "tanren", "title": "必須論点択一編 第8回", "time": "10:30", "sub": "商登法／択一30問"}, {"date": "2026-11-29", "kind": "tanren", "title": "頻出論点記述編 第8回", "time": "13:30", "sub": "記述 不登法・商登法 各1問"}, {"date": "2026-12-06", "kind": "tanren", "title": "必須論点択一編 第9回", "time": "10:30", "sub": "民訴法・民執法・保全法・書士法／択一30問"}, {"date": "2026-12-06", "kind": "tanren", "title": "頻出論点記述編 第9回", "time": "13:30", "sub": "記述 不登法・商登法 各1問"}, {"date": "2026-12-13", "kind": "tanren", "title": "必須論点択一編 第10回", "time": "10:30", "sub": "供託法・憲法・刑法／択一30問"}, {"date": "2026-12-13", "kind": "tanren", "title": "頻出論点記述編 第10回", "time": "13:30", "sub": "記述 不登法・商登法 各1問"}, {"date": "2027-01-10", "kind": "tanren", "title": "実力養成編 第1回", "time": "9:30", "sub": "民法／択一35問＋記述2問"}, {"date": "2027-01-17", "kind": "tanren", "title": "実力養成編 第2回", "time": "9:30", "sub": "民法／択一35問＋記述2問"}, {"date": "2027-01-24", "kind": "tanren", "title": "実力養成編 第3回", "time": "9:30", "sub": "民法／択一35問＋記述2問"}, {"date": "2027-01-31", "kind": "tanren", "title": "実力養成編 第4回", "time": "9:30", "sub": "民法・不登法／択一35問＋記述2問"}, {"date": "2027-02-07", "kind": "tanren", "title": "実力養成編 第5回", "time": "9:30", "sub": "不登法／択一35問＋記述2問"}, {"date": "2027-02-14", "kind": "tanren", "title": "実力養成編 第6回", "time": "9:30", "sub": "不登法／択一35問＋記述2問"}, {"date": "2027-02-21", "kind": "tanren", "title": "実力養成編 第7回", "time": "9:30", "sub": "会社法／択一35問＋記述2問"}, {"date": "2027-02-28", "kind": "tanren", "title": "実力養成編 第8回", "time": "9:30", "sub": "会社法・商法・商登法／択一35問＋記述2問"}, {"date": "2027-03-07", "kind": "tanren", "title": "実力養成編 第9回", "time": "9:30", "sub": "商登法／択一35問＋記述2問"}, {"date": "2027-03-14", "kind": "tanren", "title": "実力養成編 第10回", "time": "9:30", "sub": "憲法・刑法／択一35問＋記述2問"}, {"date": "2027-03-21", "kind": "tanren", "title": "実力養成編 第11回", "time": "9:30", "sub": "民訴法／択一35問＋記述2問"}, {"date": "2027-03-28", "kind": "tanren", "title": "実力養成編 第12回", "time": "9:30", "sub": "保全法・民執法・書士法・供託法／択一35問＋記述2問"}, {"date": "2027-04-04", "kind": "tanren", "title": "ファイナル編 第1回", "time": "9:30", "sub": "午前択一科目／択一35問＋記述2問"}, {"date": "2027-04-11", "kind": "tanren", "title": "ファイナル編 第2回", "time": "9:30", "sub": "午後択一科目／択一35問＋記述2問"}, {"date": "2027-04-18", "kind": "tanren", "title": "ファイナル編 第3回", "time": "9:30", "sub": "午前択一科目／択一35問＋記述2問"}, {"date": "2027-04-25", "kind": "tanren", "title": "ファイナル編 第4回", "time": "9:30", "sub": "午後択一科目／択一35問＋記述2問"}, {"date": "2027-05-02", "kind": "moshi", "title": "全国公開模擬試験 第1回", "time": "9:30", "sub": "本試験と同形式"}, {"date": "2027-05-09", "kind": "tanren", "title": "ファイナル編 第5回", "time": "9:30", "sub": "午前択一科目／択一35問＋記述2問"}, {"date": "2027-05-16", "kind": "tanren", "title": "ファイナル編 第6回", "time": "9:30", "sub": "午後択一科目／択一35問＋記述2問"}, {"date": "2027-05-23", "kind": "tanren", "title": "ファイナル編 第7回", "time": "9:30", "sub": "午前択一科目／択一35問＋記述2問"}, {"date": "2027-05-30", "kind": "tanren", "title": "ファイナル編 第8回", "time": "9:30", "sub": "午後択一科目／択一35問＋記述2問"}, {"date": "2027-06-06", "kind": "moshi", "title": "全国公開模擬試験 第2回", "time": "9:30", "sub": "本試験と同形式"}, {"date": "2027-06-13", "kind": "moshi", "title": "全国スーパー公開模擬試験 第1回", "time": "9:30", "sub": "本試験と同形式"}, {"date": "2027-06-20", "kind": "moshi", "title": "全国スーパー公開模擬試験 第2回", "time": "9:30", "sub": "本試験と同形式"}, {"date": "2027-07-04", "kind": "honshi", "title": "令和9年度 司法書士筆記試験（見込み）", "time": "9:30", "sub": "午前 9:30–11:30 ／ 午後 13:00–16:00　※日程は未発表・例年7月第1日曜"}]};
-const WD=["日","月","火","水","木","金","土"], MARU=["①","②","③","④","⑤","⑥","⑦","⑧","⑨","⑩"];
-const KEY="shihoshoshi:log:v2", EKEY="shihoshoshi:events:v1", DONE_BASE=344;
-const byDate={}; DATA.days.forEach(d=>byDate[d.date]=d);
-const HONSHI="2027-07-04";
-const evBy={}; DATA.events.forEach((e,i)=>{ e.id=e.date+"#"+i; (evBy[e.date]=evBy[e.date]||[]).push(e); });
-const isoOf=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
-const TODAY=isoOf(new Date());
-const status=document.getElementById("status");
-let checked=new Set(), evDone=new Set(), sel=null;
-
-/* 保存 */
-const mem={}; let where="メモリ";
-const store={
-  async get(k){ if(window.storage){ try{ const r=await window.storage.get(k,false); where="Claude内"; return r?r.value:null; }catch(e){ where="Claude内"; return null; } }
-    try{ const v=localStorage.getItem(k); localStorage.setItem("__t","1"); localStorage.removeItem("__t"); where="このブラウザ"; return v; }catch(e){ return mem[k]??null; } },
-  async set(k,v){ if(window.storage){ await window.storage.set(k,v,false); return; }
-    try{ localStorage.setItem(k,v); }catch(e){ mem[k]=v; throw e; } },
-  async del(k){ if(window.storage){ try{ await window.storage.delete(k,false); }catch(e){} return; }
-    try{ localStorage.removeItem(k); }catch(e){ delete mem[k]; } }
-};
-async function load(){
-  try{ const v=await store.get(KEY); const a=v?JSON.parse(v):[]; checked=new Set(Array.isArray(a)?a:[]); }catch(e){ checked=new Set(); }
-  try{ const v=await store.get(EKEY); const a=v?JSON.parse(v):[]; evDone=new Set(Array.isArray(a)?a:[]); }catch(e){ evDone=new Set(); }
-}
-let t=null;
-function save(){ clearTimeout(t); t=setTimeout(async()=>{
-  try{ await store.set(KEY,JSON.stringify([...checked])); await store.set(EKEY,JSON.stringify([...evDone]));
-    status.textContent="保存しました（"+where+"）。"; }
-  catch(e){ status.textContent="保存できませんでした。この画面を開いている間だけ反映されます。"; } },250); }
-
-/* 1問ずつ */
-const PROBS=[], byDayProbs={};
-DATA.days.forEach(d=>{ byDayProbs[d.date]=[];
-  d.chunks.forEach(c=>{ for(let q=c.from;q<=c.to;q++){
-    const p={key:c.vol+"-"+(c.sec||"")+"-"+q,vol:c.vol,sec:c.sec,q,date:d.date};
-    PROBS.push(p); byDayProbs[d.date].push(p); } }); });
-const ORDER={}; PROBS.forEach((p,i)=>ORDER[p.key]=i);
-const dayDone=d=>byDayProbs[d].filter(p=>checked.has(p.key)).length;
-
-/* カウントダウン */
-(function(){ const a=new Date(TODAY+"T00:00:00"), b=new Date(HONSHI+"T00:00:00");
-  const n=Math.round((b-a)/86400000);
-  document.getElementById("count").innerHTML='<div class="n">'+n+'</div>'+
-    '<div class="l">日　／　<b>令和9年度 筆記試験</b>　2027年7月4日(日) 見込み<br>例年7月第1日曜。正式発表は例年4月頃</div>';
-})();
-
-/* 背表紙 */
-const shelf=document.getElementById("shelf");
-for(let i=1;i<=10;i++){ const v=DATA.vol[i], el=document.createElement("div");
-  el.className="spine"; el.style.background=v.color; el.style.flex=v.total+" 0 0"; el.title=MARU[i-1]+v.name;
-  el.innerHTML='<div class="fill" style="height:0"></div><div class="vt">'+v.name+'</div><div class="no">'+MARU[i-1]+'</div>';
-  shelf.appendChild(el); }
-function paintShelf(){
-  const dm=Object.assign({},DATA.done); checked.forEach(k=>{ const v=+k.split("-")[0]; dm[v]=(dm[v]||0)+1; });
-  shelf.querySelectorAll(".spine").forEach((el,i)=>{ el.querySelector(".fill").style.height=Math.min(100,(dm[i+1]||0)/DATA.vol[i+1].total*100)+"%"; });
-  const n=checked.size, note=document.getElementById("shelfNote");
-  if(n===0){ note.textContent="巻①と巻②の担保物権49問までが終了済み（344問）。"; return; }
-  let far=-1; checked.forEach(k=>{ if(ORDER[k]>far) far=ORDER[k]; });
-  const p=PROBS[far];
-  note.textContent="最も進んだ問題："+MARU[p.vol-1]+DATA.vol[p.vol].name+(p.sec?" "+p.sec:"")+" 第"+p.q+"問　／　通算 "+(DONE_BASE+n)+"／1687問";
-}
-function paintTrack(){
-  const planned=DATA.days.filter(d=>d.date<=TODAY).reduce((s,d)=>s+d.count,0);
-  const act=checked.size, gap=act-planned, cls=gap===0?"even":(gap>0?"ahead":"");
-  document.getElementById("track").innerHTML=
-    '<div><div class="k">予定累計</div><div class="v">'+planned+'<small>問</small></div><div class="note">'+
-      (TODAY<DATA.days[0].date?"7/18 スタート":(TODAY>"2026-09-30"?"過去問1周目 終了":"本日 "+TODAY.slice(5).replace("-","/")+" 時点"))+'</div></div>'+
-    '<div><div class="k">実績累計</div><div class="v">'+act+'<small>問</small></div><div class="note">総済み '+(DONE_BASE+act)+' / 1687問</div></div>'+
-    '<div class="gap '+cls+'"><div class="k">'+(gap<0?"遅れ":"貯金")+'</div><div class="v">'+(gap>0?"+":"")+gap+'<small>問</small></div>'+
-      '<div class="note">'+(gap===0?"予定どおり":(gap>0?"先行しています":"予備日 10/1〜で吸収可"))+'</div></div>';
-}
-
-/* パネル */
-function paintPanel(){
-  const p=document.getElementById("panel");
-  if(!sel){ p.innerHTML='<div class="p-date">日付を選ぶと、その日の内容が出ます。</div>'; return; }
-  const dt=new Date(sel+"T00:00:00"), d=byDate[sel], evs=evBy[sel]||[];
-  let h='<div class="p-date"><b>'+(dt.getMonth()+1)+'月'+dt.getDate()+'日</b>（'+WD[dt.getDay()]+'）';
-  if(d) h+='　過去問 予定 '+d.count+'問';
-  h+='</div>';
-  if(d){ h+=d.chunks.map(c=>{const v=DATA.vol[c.vol];
-      return '<div class="d-row"><i style="background:'+v.color+'"></i><span>'+MARU[c.vol-1]+v.name+(c.sec?" "+c.sec:"")+
-        '</span><span class="rng">第'+c.from+'問 – 第'+c.to+'問</span></div>';}).join("");
+const D={"d1": [{"date": "2026-07-18", "count": 20, "chunks": [{"vol": 2, "sec": "担保物権", "from": 107, "to": 123}, {"vol": 3, "sec": "親族", "from": 1, "to": 3}]}, {"date": "2026-07-20", "count": 16, "chunks": [{"vol": 3, "sec": "親族", "from": 4, "to": 19}]}, {"date": "2026-07-21", "count": 16, "chunks": [{"vol": 3, "sec": "親族", "from": 20, "to": 35}]}, {"date": "2026-07-22", "count": 16, "chunks": [{"vol": 3, "sec": "親族", "from": 36, "to": 51}]}, {"date": "2026-07-23", "count": 16, "chunks": [{"vol": 3, "sec": "親族", "from": 52, "to": 55}, {"vol": 3, "sec": "相続", "from": 1, "to": 12}]}, {"date": "2026-07-24", "count": 16, "chunks": [{"vol": 3, "sec": "相続", "from": 13, "to": 28}]}, {"date": "2026-07-25", "count": 20, "chunks": [{"vol": 3, "sec": "相続", "from": 29, "to": 48}]}, {"date": "2026-07-27", "count": 16, "chunks": [{"vol": 3, "sec": "相続", "from": 49, "to": 50}, {"vol": 4, "sec": "", "from": 1, "to": 14}]}, {"date": "2026-07-28", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 15, "to": 30}]}, {"date": "2026-07-29", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 31, "to": 46}]}, {"date": "2026-07-30", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 47, "to": 62}]}, {"date": "2026-07-31", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 63, "to": 78}]}, {"date": "2026-08-01", "count": 20, "chunks": [{"vol": 4, "sec": "", "from": 79, "to": 98}]}, {"date": "2026-08-03", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 99, "to": 114}]}, {"date": "2026-08-04", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 115, "to": 130}]}, {"date": "2026-08-05", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 131, "to": 146}]}, {"date": "2026-08-06", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 147, "to": 162}]}, {"date": "2026-08-07", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 163, "to": 178}]}, {"date": "2026-08-08", "count": 20, "chunks": [{"vol": 4, "sec": "", "from": 179, "to": 198}]}, {"date": "2026-08-10", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 199, "to": 214}]}, {"date": "2026-08-11", "count": 16, "chunks": [{"vol": 4, "sec": "", "from": 215, "to": 230}]}, {"date": "2026-08-12", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 1, "to": 16}]}, {"date": "2026-08-13", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 17, "to": 32}]}, {"date": "2026-08-14", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 33, "to": 48}]}, {"date": "2026-08-15", "count": 20, "chunks": [{"vol": 5, "sec": "", "from": 49, "to": 68}]}, {"date": "2026-08-17", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 69, "to": 84}]}, {"date": "2026-08-18", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 85, "to": 100}]}, {"date": "2026-08-19", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 101, "to": 116}]}, {"date": "2026-08-20", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 117, "to": 132}]}, {"date": "2026-08-21", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 133, "to": 148}]}, {"date": "2026-08-22", "count": 20, "chunks": [{"vol": 5, "sec": "", "from": 149, "to": 168}]}, {"date": "2026-08-24", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 169, "to": 184}]}, {"date": "2026-08-25", "count": 16, "chunks": [{"vol": 5, "sec": "", "from": 185, "to": 186}, {"vol": 6, "sec": "第1編", "from": 1, "to": 14}]}, {"date": "2026-08-26", "count": 16, "chunks": [{"vol": 6, "sec": "第1編", "from": 15, "to": 30}]}, {"date": "2026-08-27", "count": 16, "chunks": [{"vol": 6, "sec": "第1編", "from": 31, "to": 46}]}, {"date": "2026-08-28", "count": 16, "chunks": [{"vol": 6, "sec": "第1編", "from": 47, "to": 62}]}, {"date": "2026-08-29", "count": 20, "chunks": [{"vol": 6, "sec": "第1編", "from": 63, "to": 82}]}, {"date": "2026-08-31", "count": 16, "chunks": [{"vol": 6, "sec": "第1編", "from": 83, "to": 98}]}, {"date": "2026-09-01", "count": 16, "chunks": [{"vol": 6, "sec": "第1編", "from": 99, "to": 109}, {"vol": 6, "sec": "第2編", "from": 1, "to": 5}]}, {"date": "2026-09-02", "count": 16, "chunks": [{"vol": 6, "sec": "第2編", "from": 6, "to": 18}, {"vol": 6, "sec": "第3編", "from": 1, "to": 3}]}, {"date": "2026-09-03", "count": 16, "chunks": [{"vol": 6, "sec": "第3編", "from": 4, "to": 7}, {"vol": 6, "sec": "第4編", "from": 1, "to": 12}]}, {"date": "2026-09-04", "count": 16, "chunks": [{"vol": 6, "sec": "第4編", "from": 13, "to": 17}, {"vol": 6, "sec": "第5編", "from": 1, "to": 9}, {"vol": 6, "sec": "第6編", "from": 1, "to": 2}]}, {"date": "2026-09-05", "count": 20, "chunks": [{"vol": 6, "sec": "第6編", "from": 3, "to": 14}, {"vol": 7, "sec": "", "from": 1, "to": 8}]}, {"date": "2026-09-07", "count": 16, "chunks": [{"vol": 7, "sec": "", "from": 9, "to": 24}]}, {"date": "2026-09-08", "count": 16, "chunks": [{"vol": 7, "sec": "", "from": 25, "to": 40}]}, {"date": "2026-09-09", "count": 16, "chunks": [{"vol": 7, "sec": "", "from": 41, "to": 56}]}, {"date": "2026-09-10", "count": 16, "chunks": [{"vol": 7, "sec": "", "from": 57, "to": 72}]}, {"date": "2026-09-11", "count": 16, "chunks": [{"vol": 7, "sec": "", "from": 73, "to": 88}]}, {"date": "2026-09-12", "count": 20, "chunks": [{"vol": 7, "sec": "", "from": 89, "to": 108}]}, {"date": "2026-09-14", "count": 16, "chunks": [{"vol": 7, "sec": "", "from": 109, "to": 124}]}, {"date": "2026-09-15", "count": 16, "chunks": [{"vol": 7, "sec": "", "from": 125, "to": 140}]}, {"date": "2026-09-16", "count": 16, "chunks": [{"vol": 7, "sec": "", "from": 141, "to": 141}, {"vol": 8, "sec": "民事訴訟法", "from": 1, "to": 15}]}, {"date": "2026-09-17", "count": 16, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 16, "to": 31}]}, {"date": "2026-09-18", "count": 16, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 32, "to": 47}]}, {"date": "2026-09-19", "count": 20, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 48, "to": 67}]}, {"date": "2026-09-21", "count": 16, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 68, "to": 83}]}, {"date": "2026-09-22", "count": 16, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 84, "to": 99}]}, {"date": "2026-09-23", "count": 16, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 100, "to": 115}]}, {"date": "2026-09-24", "count": 16, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 116, "to": 130}, {"vol": 8, "sec": "民事執行法", "from": 1, "to": 1}]}, {"date": "2026-09-25", "count": 16, "chunks": [{"vol": 8, "sec": "民事執行法", "from": 2, "to": 17}]}, {"date": "2026-09-26", "count": 20, "chunks": [{"vol": 8, "sec": "民事執行法", "from": 18, "to": 26}, {"vol": 8, "sec": "民事保全法", "from": 1, "to": 11}]}, {"date": "2026-09-28", "count": 16, "chunks": [{"vol": 8, "sec": "民事保全法", "from": 12, "to": 26}, {"vol": 9, "sec": "供託法", "from": 1, "to": 1}]}, {"date": "2026-09-29", "count": 16, "chunks": [{"vol": 9, "sec": "供託法", "from": 2, "to": 17}]}, {"date": "2026-09-30", "count": 16, "chunks": [{"vol": 9, "sec": "供託法", "from": 18, "to": 33}]}, {"date": "2026-10-01", "count": 16, "chunks": [{"vol": 9, "sec": "供託法", "from": 34, "to": 49}]}, {"date": "2026-10-02", "count": 16, "chunks": [{"vol": 9, "sec": "供託法", "from": 50, "to": 65}]}, {"date": "2026-10-03", "count": 20, "chunks": [{"vol": 9, "sec": "供託法", "from": 66, "to": 78}, {"vol": 9, "sec": "司法書士法", "from": 1, "to": 7}]}, {"date": "2026-10-05", "count": 16, "chunks": [{"vol": 9, "sec": "司法書士法", "from": 8, "to": 23}]}, {"date": "2026-10-06", "count": 16, "chunks": [{"vol": 10, "sec": "刑法", "from": 1, "to": 16}]}, {"date": "2026-10-07", "count": 16, "chunks": [{"vol": 10, "sec": "刑法", "from": 17, "to": 32}]}, {"date": "2026-10-08", "count": 16, "chunks": [{"vol": 10, "sec": "刑法", "from": 33, "to": 48}]}, {"date": "2026-10-09", "count": 16, "chunks": [{"vol": 10, "sec": "刑法", "from": 49, "to": 64}]}, {"date": "2026-10-10", "count": 20, "chunks": [{"vol": 10, "sec": "刑法", "from": 65, "to": 81}, {"vol": 10, "sec": "憲法", "from": 1, "to": 3}]}, {"date": "2026-10-12", "count": 16, "chunks": [{"vol": 10, "sec": "憲法", "from": 4, "to": 19}]}, {"date": "2026-10-13", "count": 16, "chunks": [{"vol": 10, "sec": "憲法", "from": 20, "to": 35}]}, {"date": "2026-10-14", "count": 16, "chunks": [{"vol": 10, "sec": "憲法", "from": 36, "to": 51}]}, {"date": "2026-10-15", "count": 16, "chunks": [{"vol": 10, "sec": "憲法", "from": 52, "to": 67}]}, {"date": "2026-10-16", "count": 2, "chunks": [{"vol": 10, "sec": "憲法", "from": 68, "to": 69}]}], "d2": [{"date": "2026-08-01", "count": 26, "chunks": [{"vol": 1, "sec": "総則", "from": 1, "to": 26}]}, {"date": "2026-08-03", "count": 21, "chunks": [{"vol": 1, "sec": "総則", "from": 27, "to": 47}]}, {"date": "2026-08-04", "count": 21, "chunks": [{"vol": 1, "sec": "総則", "from": 48, "to": 68}]}, {"date": "2026-08-05", "count": 21, "chunks": [{"vol": 1, "sec": "総則", "from": 69, "to": 86}, {"vol": 1, "sec": "債権", "from": 1, "to": 3}]}, {"date": "2026-08-06", "count": 21, "chunks": [{"vol": 1, "sec": "債権", "from": 4, "to": 24}]}, {"date": "2026-08-07", "count": 21, "chunks": [{"vol": 1, "sec": "債権", "from": 25, "to": 45}]}, {"date": "2026-08-08", "count": 26, "chunks": [{"vol": 1, "sec": "債権", "from": 46, "to": 71}]}, {"date": "2026-08-10", "count": 21, "chunks": [{"vol": 1, "sec": "債権", "from": 72, "to": 92}]}, {"date": "2026-08-11", "count": 21, "chunks": [{"vol": 1, "sec": "債権", "from": 93, "to": 100}, {"vol": 2, "sec": "物権", "from": 1, "to": 13}]}, {"date": "2026-08-12", "count": 21, "chunks": [{"vol": 2, "sec": "物権", "from": 14, "to": 34}]}, {"date": "2026-08-13", "count": 21, "chunks": [{"vol": 2, "sec": "物権", "from": 35, "to": 55}]}, {"date": "2026-08-14", "count": 21, "chunks": [{"vol": 2, "sec": "物権", "from": 56, "to": 76}]}, {"date": "2026-08-15", "count": 26, "chunks": [{"vol": 2, "sec": "物権", "from": 77, "to": 102}]}, {"date": "2026-08-17", "count": 21, "chunks": [{"vol": 2, "sec": "物権", "from": 103, "to": 109}, {"vol": 2, "sec": "担保物権", "from": 1, "to": 14}]}, {"date": "2026-08-18", "count": 21, "chunks": [{"vol": 2, "sec": "担保物権", "from": 15, "to": 35}]}, {"date": "2026-08-19", "count": 21, "chunks": [{"vol": 2, "sec": "担保物権", "from": 36, "to": 56}]}, {"date": "2026-08-20", "count": 21, "chunks": [{"vol": 2, "sec": "担保物権", "from": 57, "to": 77}]}, {"date": "2026-08-21", "count": 21, "chunks": [{"vol": 2, "sec": "担保物権", "from": 78, "to": 98}]}, {"date": "2026-08-22", "count": 26, "chunks": [{"vol": 2, "sec": "担保物権", "from": 99, "to": 123}, {"vol": 3, "sec": "親族", "from": 1, "to": 1}]}, {"date": "2026-08-24", "count": 21, "chunks": [{"vol": 3, "sec": "親族", "from": 2, "to": 22}]}, {"date": "2026-08-25", "count": 21, "chunks": [{"vol": 3, "sec": "親族", "from": 23, "to": 43}]}, {"date": "2026-08-26", "count": 21, "chunks": [{"vol": 3, "sec": "親族", "from": 44, "to": 55}, {"vol": 3, "sec": "相続", "from": 1, "to": 9}]}, {"date": "2026-08-27", "count": 21, "chunks": [{"vol": 3, "sec": "相続", "from": 10, "to": 30}]}, {"date": "2026-08-28", "count": 21, "chunks": [{"vol": 3, "sec": "相続", "from": 31, "to": 50}, {"vol": 4, "sec": "", "from": 1, "to": 1}]}, {"date": "2026-08-29", "count": 26, "chunks": [{"vol": 4, "sec": "", "from": 2, "to": 27}]}, {"date": "2026-08-31", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 28, "to": 48}]}, {"date": "2026-09-01", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 49, "to": 69}]}, {"date": "2026-09-02", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 70, "to": 90}]}, {"date": "2026-09-03", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 91, "to": 111}]}, {"date": "2026-09-04", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 112, "to": 132}]}, {"date": "2026-09-05", "count": 26, "chunks": [{"vol": 4, "sec": "", "from": 133, "to": 158}]}, {"date": "2026-09-07", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 159, "to": 179}]}, {"date": "2026-09-08", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 180, "to": 200}]}, {"date": "2026-09-09", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 201, "to": 221}]}, {"date": "2026-09-10", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 222, "to": 230}, {"vol": 5, "sec": "", "from": 1, "to": 12}]}, {"date": "2026-09-11", "count": 21, "chunks": [{"vol": 5, "sec": "", "from": 13, "to": 33}]}, {"date": "2026-09-12", "count": 26, "chunks": [{"vol": 5, "sec": "", "from": 34, "to": 59}]}, {"date": "2026-09-14", "count": 21, "chunks": [{"vol": 5, "sec": "", "from": 60, "to": 80}]}, {"date": "2026-09-15", "count": 21, "chunks": [{"vol": 5, "sec": "", "from": 81, "to": 101}]}, {"date": "2026-09-16", "count": 21, "chunks": [{"vol": 5, "sec": "", "from": 102, "to": 122}]}, {"date": "2026-09-17", "count": 21, "chunks": [{"vol": 5, "sec": "", "from": 123, "to": 143}]}, {"date": "2026-09-18", "count": 21, "chunks": [{"vol": 5, "sec": "", "from": 144, "to": 164}]}, {"date": "2026-09-19", "count": 26, "chunks": [{"vol": 5, "sec": "", "from": 165, "to": 186}, {"vol": 6, "sec": "第1編", "from": 1, "to": 4}]}, {"date": "2026-09-21", "count": 21, "chunks": [{"vol": 6, "sec": "第1編", "from": 5, "to": 25}]}, {"date": "2026-09-22", "count": 21, "chunks": [{"vol": 6, "sec": "第1編", "from": 26, "to": 46}]}, {"date": "2026-09-23", "count": 21, "chunks": [{"vol": 6, "sec": "第1編", "from": 47, "to": 67}]}, {"date": "2026-09-24", "count": 21, "chunks": [{"vol": 6, "sec": "第1編", "from": 68, "to": 88}]}, {"date": "2026-09-25", "count": 21, "chunks": [{"vol": 6, "sec": "第1編", "from": 89, "to": 109}]}, {"date": "2026-09-26", "count": 26, "chunks": [{"vol": 6, "sec": "第2編", "from": 1, "to": 18}, {"vol": 6, "sec": "第3編", "from": 1, "to": 7}, {"vol": 6, "sec": "第4編", "from": 1, "to": 1}]}, {"date": "2026-09-28", "count": 21, "chunks": [{"vol": 6, "sec": "第4編", "from": 2, "to": 17}, {"vol": 6, "sec": "第5編", "from": 1, "to": 5}]}, {"date": "2026-09-29", "count": 21, "chunks": [{"vol": 6, "sec": "第5編", "from": 6, "to": 9}, {"vol": 6, "sec": "第6編", "from": 1, "to": 14}, {"vol": 7, "sec": "", "from": 1, "to": 3}]}, {"date": "2026-09-30", "count": 21, "chunks": [{"vol": 7, "sec": "", "from": 4, "to": 24}]}, {"date": "2026-10-01", "count": 21, "chunks": [{"vol": 7, "sec": "", "from": 25, "to": 45}]}, {"date": "2026-10-02", "count": 21, "chunks": [{"vol": 7, "sec": "", "from": 46, "to": 66}]}, {"date": "2026-10-03", "count": 26, "chunks": [{"vol": 7, "sec": "", "from": 67, "to": 92}]}, {"date": "2026-10-05", "count": 21, "chunks": [{"vol": 7, "sec": "", "from": 93, "to": 113}]}, {"date": "2026-10-06", "count": 21, "chunks": [{"vol": 7, "sec": "", "from": 114, "to": 134}]}, {"date": "2026-10-07", "count": 21, "chunks": [{"vol": 7, "sec": "", "from": 135, "to": 141}, {"vol": 8, "sec": "民事訴訟法", "from": 1, "to": 14}]}, {"date": "2026-10-08", "count": 21, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 15, "to": 35}]}, {"date": "2026-10-09", "count": 21, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 36, "to": 56}]}, {"date": "2026-10-10", "count": 26, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 57, "to": 82}]}, {"date": "2026-10-12", "count": 21, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 83, "to": 103}]}, {"date": "2026-10-13", "count": 21, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 104, "to": 124}]}, {"date": "2026-10-14", "count": 21, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 125, "to": 130}, {"vol": 8, "sec": "民事執行法", "from": 1, "to": 15}]}, {"date": "2026-10-15", "count": 21, "chunks": [{"vol": 8, "sec": "民事執行法", "from": 16, "to": 26}, {"vol": 8, "sec": "民事保全法", "from": 1, "to": 10}]}, {"date": "2026-10-16", "count": 21, "chunks": [{"vol": 8, "sec": "民事保全法", "from": 11, "to": 26}, {"vol": 9, "sec": "供託法", "from": 1, "to": 5}]}, {"date": "2026-10-17", "count": 26, "chunks": [{"vol": 9, "sec": "供託法", "from": 6, "to": 31}]}, {"date": "2026-10-19", "count": 21, "chunks": [{"vol": 9, "sec": "供託法", "from": 32, "to": 52}]}, {"date": "2026-10-20", "count": 21, "chunks": [{"vol": 9, "sec": "供託法", "from": 53, "to": 73}]}, {"date": "2026-10-21", "count": 21, "chunks": [{"vol": 9, "sec": "供託法", "from": 74, "to": 78}, {"vol": 9, "sec": "司法書士法", "from": 1, "to": 16}]}, {"date": "2026-10-22", "count": 21, "chunks": [{"vol": 9, "sec": "司法書士法", "from": 17, "to": 23}, {"vol": 10, "sec": "刑法", "from": 1, "to": 14}]}, {"date": "2026-10-23", "count": 21, "chunks": [{"vol": 10, "sec": "刑法", "from": 15, "to": 35}]}, {"date": "2026-10-24", "count": 26, "chunks": [{"vol": 10, "sec": "刑法", "from": 36, "to": 61}]}, {"date": "2026-10-26", "count": 21, "chunks": [{"vol": 10, "sec": "刑法", "from": 62, "to": 81}, {"vol": 10, "sec": "憲法", "from": 1, "to": 1}]}, {"date": "2026-10-27", "count": 21, "chunks": [{"vol": 10, "sec": "憲法", "from": 2, "to": 22}]}, {"date": "2026-10-28", "count": 21, "chunks": [{"vol": 10, "sec": "憲法", "from": 23, "to": 43}]}, {"date": "2026-10-29", "count": 21, "chunks": [{"vol": 10, "sec": "憲法", "from": 44, "to": 64}]}, {"date": "2026-10-30", "count": 5, "chunks": [{"vol": 10, "sec": "憲法", "from": 65, "to": 69}]}], "d3": [{"date": "2026-10-31", "count": 26, "chunks": [{"vol": 1, "sec": "総則", "from": 1, "to": 26}]}, {"date": "2026-11-02", "count": 21, "chunks": [{"vol": 1, "sec": "総則", "from": 27, "to": 47}]}, {"date": "2026-11-03", "count": 21, "chunks": [{"vol": 1, "sec": "総則", "from": 48, "to": 68}]}, {"date": "2026-11-04", "count": 21, "chunks": [{"vol": 1, "sec": "総則", "from": 69, "to": 86}, {"vol": 1, "sec": "債権", "from": 1, "to": 3}]}, {"date": "2026-11-05", "count": 21, "chunks": [{"vol": 1, "sec": "債権", "from": 4, "to": 24}]}, {"date": "2026-11-06", "count": 21, "chunks": [{"vol": 1, "sec": "債権", "from": 25, "to": 45}]}, {"date": "2026-11-07", "count": 26, "chunks": [{"vol": 1, "sec": "債権", "from": 46, "to": 71}]}, {"date": "2026-11-09", "count": 21, "chunks": [{"vol": 1, "sec": "債権", "from": 72, "to": 92}]}, {"date": "2026-11-10", "count": 21, "chunks": [{"vol": 1, "sec": "債権", "from": 93, "to": 100}, {"vol": 2, "sec": "物権", "from": 1, "to": 13}]}, {"date": "2026-11-11", "count": 21, "chunks": [{"vol": 2, "sec": "物権", "from": 14, "to": 34}]}, {"date": "2026-11-12", "count": 21, "chunks": [{"vol": 2, "sec": "物権", "from": 35, "to": 55}]}, {"date": "2026-11-13", "count": 21, "chunks": [{"vol": 2, "sec": "物権", "from": 56, "to": 76}]}, {"date": "2026-11-14", "count": 26, "chunks": [{"vol": 2, "sec": "物権", "from": 77, "to": 102}]}, {"date": "2026-11-16", "count": 21, "chunks": [{"vol": 2, "sec": "物権", "from": 103, "to": 109}, {"vol": 2, "sec": "担保物権", "from": 1, "to": 14}]}, {"date": "2026-11-17", "count": 21, "chunks": [{"vol": 2, "sec": "担保物権", "from": 15, "to": 35}]}, {"date": "2026-11-18", "count": 21, "chunks": [{"vol": 2, "sec": "担保物権", "from": 36, "to": 56}]}, {"date": "2026-11-19", "count": 21, "chunks": [{"vol": 2, "sec": "担保物権", "from": 57, "to": 77}]}, {"date": "2026-11-20", "count": 21, "chunks": [{"vol": 2, "sec": "担保物権", "from": 78, "to": 98}]}, {"date": "2026-11-21", "count": 26, "chunks": [{"vol": 2, "sec": "担保物権", "from": 99, "to": 123}, {"vol": 3, "sec": "親族", "from": 1, "to": 1}]}, {"date": "2026-11-23", "count": 21, "chunks": [{"vol": 3, "sec": "親族", "from": 2, "to": 22}]}, {"date": "2026-11-24", "count": 21, "chunks": [{"vol": 3, "sec": "親族", "from": 23, "to": 43}]}, {"date": "2026-11-25", "count": 21, "chunks": [{"vol": 3, "sec": "親族", "from": 44, "to": 55}, {"vol": 3, "sec": "相続", "from": 1, "to": 9}]}, {"date": "2026-11-26", "count": 21, "chunks": [{"vol": 3, "sec": "相続", "from": 10, "to": 30}]}, {"date": "2026-11-27", "count": 21, "chunks": [{"vol": 3, "sec": "相続", "from": 31, "to": 50}, {"vol": 4, "sec": "", "from": 1, "to": 1}]}, {"date": "2026-11-28", "count": 26, "chunks": [{"vol": 4, "sec": "", "from": 2, "to": 27}]}, {"date": "2026-11-30", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 28, "to": 48}]}, {"date": "2026-12-01", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 49, "to": 69}]}, {"date": "2026-12-02", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 70, "to": 90}]}, {"date": "2026-12-03", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 91, "to": 111}]}, {"date": "2026-12-04", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 112, "to": 132}]}, {"date": "2026-12-05", "count": 26, "chunks": [{"vol": 4, "sec": "", "from": 133, "to": 158}]}, {"date": "2026-12-07", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 159, "to": 179}]}, {"date": "2026-12-08", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 180, "to": 200}]}, {"date": "2026-12-09", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 201, "to": 221}]}, {"date": "2026-12-10", "count": 21, "chunks": [{"vol": 4, "sec": "", "from": 222, "to": 230}, {"vol": 5, "sec": "", "from": 1, "to": 12}]}, {"date": "2026-12-11", "count": 21, "chunks": [{"vol": 5, "sec": "", "from": 13, "to": 33}]}, {"date": "2026-12-12", "count": 26, "chunks": [{"vol": 5, "sec": "", "from": 34, "to": 59}]}, {"date": "2026-12-14", "count": 21, "chunks": [{"vol": 5, "sec": "", "from": 60, "to": 80}]}, {"date": "2026-12-15", "count": 21, "chunks": [{"vol": 5, "sec": "", "from": 81, "to": 101}]}, {"date": "2026-12-16", "count": 21, "chunks": [{"vol": 5, "sec": "", "from": 102, "to": 122}]}, {"date": "2026-12-17", "count": 21, "chunks": [{"vol": 5, "sec": "", "from": 123, "to": 143}]}, {"date": "2026-12-18", "count": 21, "chunks": [{"vol": 5, "sec": "", "from": 144, "to": 164}]}, {"date": "2026-12-19", "count": 26, "chunks": [{"vol": 5, "sec": "", "from": 165, "to": 186}, {"vol": 6, "sec": "第1編", "from": 1, "to": 4}]}, {"date": "2026-12-21", "count": 21, "chunks": [{"vol": 6, "sec": "第1編", "from": 5, "to": 25}]}, {"date": "2026-12-22", "count": 21, "chunks": [{"vol": 6, "sec": "第1編", "from": 26, "to": 46}]}, {"date": "2026-12-23", "count": 21, "chunks": [{"vol": 6, "sec": "第1編", "from": 47, "to": 67}]}, {"date": "2026-12-24", "count": 21, "chunks": [{"vol": 6, "sec": "第1編", "from": 68, "to": 88}]}, {"date": "2026-12-25", "count": 21, "chunks": [{"vol": 6, "sec": "第1編", "from": 89, "to": 109}]}, {"date": "2026-12-26", "count": 26, "chunks": [{"vol": 6, "sec": "第2編", "from": 1, "to": 18}, {"vol": 6, "sec": "第3編", "from": 1, "to": 7}, {"vol": 6, "sec": "第4編", "from": 1, "to": 1}]}, {"date": "2026-12-28", "count": 21, "chunks": [{"vol": 6, "sec": "第4編", "from": 2, "to": 17}, {"vol": 6, "sec": "第5編", "from": 1, "to": 5}]}, {"date": "2026-12-29", "count": 21, "chunks": [{"vol": 6, "sec": "第5編", "from": 6, "to": 9}, {"vol": 6, "sec": "第6編", "from": 1, "to": 14}, {"vol": 7, "sec": "", "from": 1, "to": 3}]}, {"date": "2026-12-30", "count": 21, "chunks": [{"vol": 7, "sec": "", "from": 4, "to": 24}]}, {"date": "2026-12-31", "count": 21, "chunks": [{"vol": 7, "sec": "", "from": 25, "to": 45}]}, {"date": "2027-01-01", "count": 21, "chunks": [{"vol": 7, "sec": "", "from": 46, "to": 66}]}, {"date": "2027-01-02", "count": 26, "chunks": [{"vol": 7, "sec": "", "from": 67, "to": 92}]}, {"date": "2027-01-04", "count": 21, "chunks": [{"vol": 7, "sec": "", "from": 93, "to": 113}]}, {"date": "2027-01-05", "count": 21, "chunks": [{"vol": 7, "sec": "", "from": 114, "to": 134}]}, {"date": "2027-01-06", "count": 21, "chunks": [{"vol": 7, "sec": "", "from": 135, "to": 141}, {"vol": 8, "sec": "民事訴訟法", "from": 1, "to": 14}]}, {"date": "2027-01-07", "count": 21, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 15, "to": 35}]}, {"date": "2027-01-08", "count": 21, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 36, "to": 56}]}, {"date": "2027-01-09", "count": 26, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 57, "to": 82}]}, {"date": "2027-01-11", "count": 21, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 83, "to": 103}]}, {"date": "2027-01-12", "count": 21, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 104, "to": 124}]}, {"date": "2027-01-13", "count": 21, "chunks": [{"vol": 8, "sec": "民事訴訟法", "from": 125, "to": 130}, {"vol": 8, "sec": "民事執行法", "from": 1, "to": 15}]}, {"date": "2027-01-14", "count": 21, "chunks": [{"vol": 8, "sec": "民事執行法", "from": 16, "to": 26}, {"vol": 8, "sec": "民事保全法", "from": 1, "to": 10}]}, {"date": "2027-01-15", "count": 21, "chunks": [{"vol": 8, "sec": "民事保全法", "from": 11, "to": 26}, {"vol": 9, "sec": "供託法", "from": 1, "to": 5}]}, {"date": "2027-01-16", "count": 26, "chunks": [{"vol": 9, "sec": "供託法", "from": 6, "to": 31}]}, {"date": "2027-01-18", "count": 21, "chunks": [{"vol": 9, "sec": "供託法", "from": 32, "to": 52}]}, {"date": "2027-01-19", "count": 21, "chunks": [{"vol": 9, "sec": "供託法", "from": 53, "to": 73}]}, {"date": "2027-01-20", "count": 21, "chunks": [{"vol": 9, "sec": "供託法", "from": 74, "to": 78}, {"vol": 9, "sec": "司法書士法", "from": 1, "to": 16}]}, {"date": "2027-01-21", "count": 21, "chunks": [{"vol": 9, "sec": "司法書士法", "from": 17, "to": 23}, {"vol": 10, "sec": "刑法", "from": 1, "to": 14}]}, {"date": "2027-01-22", "count": 21, "chunks": [{"vol": 10, "sec": "刑法", "from": 15, "to": 35}]}, {"date": "2027-01-23", "count": 26, "chunks": [{"vol": 10, "sec": "刑法", "from": 36, "to": 61}]}, {"date": "2027-01-25", "count": 21, "chunks": [{"vol": 10, "sec": "刑法", "from": 62, "to": 81}, {"vol": 10, "sec": "憲法", "from": 1, "to": 1}]}, {"date": "2027-01-26", "count": 21, "chunks": [{"vol": 10, "sec": "憲法", "from": 2, "to": 22}]}, {"date": "2027-01-27", "count": 21, "chunks": [{"vol": 10, "sec": "憲法", "from": 23, "to": 43}]}, {"date": "2027-01-28", "count": 21, "chunks": [{"vol": 10, "sec": "憲法", "from": 44, "to": 64}]}, {"date": "2027-01-29", "count": 5, "chunks": [{"vol": 10, "sec": "憲法", "from": 65, "to": 69}]}], "events": [{"date": "2026-10-17", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "令和7年度　／　第1問／39問"}, {"date": "2026-10-19", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "令和6年度　／　第2問／39問"}, {"date": "2026-10-20", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "令和5年度　／　第3問／39問"}, {"date": "2026-10-21", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "令和4年度　／　第4問／39問"}, {"date": "2026-10-22", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "令和3年度　／　第5問／39問"}, {"date": "2026-10-23", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "令和2年度　／　第6問／39問"}, {"date": "2026-10-24", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "令和1年度　／　第7問／39問"}, {"date": "2026-10-26", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "平成31年度　／　第8問／39問"}, {"date": "2026-10-27", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "平成30年度　／　第9問／39問"}, {"date": "2026-10-28", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "平成29年度　／　第10問／39問"}, {"date": "2026-10-29", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "平成28年度　／　第11問／39問"}, {"date": "2026-10-30", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "平成27年度　／　第12問／39問"}, {"date": "2026-10-31", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "平成26年度　／　第13問／39問"}, {"date": "2026-11-02", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "平成25年度　／　第14問／39問"}, {"date": "2026-11-03", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "平成24年度　／　第15問／39問"}, {"date": "2026-11-04", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "平成23年度　／　第16問／39問"}, {"date": "2026-11-05", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "平成22年度　／　第17問／39問"}, {"date": "2026-11-06", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "平成21年度　／　第18問／39問"}, {"date": "2026-11-07", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "平成20年度　／　第19問／39問"}, {"date": "2026-11-09", "kind": "kijutsu", "title": "⑪記述式 不動産登記法", "time": "—", "sub": "平成19年度　／　第20問／39問"}, {"date": "2026-11-10", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "令和7年度　／　第21問／39問"}, {"date": "2026-11-11", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "令和6年度　／　第22問／39問"}, {"date": "2026-11-12", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "令和5年度　／　第23問／39問"}, {"date": "2026-11-13", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "令和4年度　／　第24問／39問"}, {"date": "2026-11-14", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "令和3年度　／　第25問／39問"}, {"date": "2026-11-16", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "令和2年度　／　第26問／39問"}, {"date": "2026-11-17", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "令和1年度　／　第27問／39問"}, {"date": "2026-11-18", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "平成31年度　／　第28問／39問"}, {"date": "2026-11-19", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "平成30年度　／　第29問／39問"}, {"date": "2026-11-20", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "平成29年度　／　第30問／39問"}, {"date": "2026-11-21", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "平成28年度　／　第31問／39問"}, {"date": "2026-11-23", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "平成27年度　／　第32問／39問"}, {"date": "2026-11-24", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "平成26年度　／　第33問／39問"}, {"date": "2026-11-25", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "平成25年度　／　第34問／39問"}, {"date": "2026-11-26", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "平成24年度　／　第35問／39問"}, {"date": "2026-11-27", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "平成23年度　／　第36問／39問"}, {"date": "2026-11-28", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "平成22年度　／　第37問／39問"}, {"date": "2026-11-30", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "平成21年度　／　第38問／39問"}, {"date": "2026-12-01", "kind": "kijutsu", "title": "⑫記述式 商業登記法", "time": "—", "sub": "平成20年度　／　第39問／39問"}, {"date": "2027-01-10", "kind": "tanren", "title": "実力養成編 第1回", "time": "9:30", "sub": "民法／択一35問＋記述2問"}, {"date": "2027-01-17", "kind": "tanren", "title": "実力養成編 第2回", "time": "9:30", "sub": "民法／択一35問＋記述2問"}, {"date": "2027-01-24", "kind": "tanren", "title": "実力養成編 第3回", "time": "9:30", "sub": "民法／択一35問＋記述2問"}, {"date": "2027-01-31", "kind": "tanren", "title": "実力養成編 第4回", "time": "9:30", "sub": "民法・不登法／択一35問＋記述2問"}, {"date": "2027-02-07", "kind": "tanren", "title": "実力養成編 第5回", "time": "9:30", "sub": "不登法／択一35問＋記述2問"}, {"date": "2027-02-14", "kind": "tanren", "title": "実力養成編 第6回", "time": "9:30", "sub": "不登法／択一35問＋記述2問"}, {"date": "2027-02-21", "kind": "tanren", "title": "実力養成編 第7回", "time": "9:30", "sub": "会社法／択一35問＋記述2問"}, {"date": "2027-02-28", "kind": "tanren", "title": "実力養成編 第8回", "time": "9:30", "sub": "会社法・商法・商登法／択一35問＋記述2問"}, {"date": "2027-03-07", "kind": "tanren", "title": "実力養成編 第9回", "time": "9:30", "sub": "商登法／択一35問＋記述2問"}, {"date": "2027-03-14", "kind": "tanren", "title": "実力養成編 第10回", "time": "9:30", "sub": "憲法・刑法／択一35問＋記述2問"}, {"date": "2027-03-21", "kind": "tanren", "title": "実力養成編 第11回", "time": "9:30", "sub": "民訴法／択一35問＋記述2問"}, {"date": "2027-03-28", "kind": "tanren", "title": "実力養成編 第12回", "time": "9:30", "sub": "保全法・民執法・書士法・供託法／択一35問＋記述2問"}, {"date": "2027-04-04", "kind": "tanren", "title": "ファイナル編 第1回", "time": "9:30", "sub": "午前択一科目／択一35問＋記述2問"}, {"date": "2027-04-11", "kind": "tanren", "title": "ファイナル編 第2回", "time": "9:30", "sub": "午後択一科目／択一35問＋記述2問"}, {"date": "2027-04-18", "kind": "tanren", "title": "ファイナル編 第3回", "time": "9:30", "sub": "午前択一科目／択一35問＋記述2問"}, {"date": "2027-04-25", "kind": "tanren", "title": "ファイナル編 第4回", "time": "9:30", "sub": "午後択一科目／択一35問＋記述2問"}, {"date": "2027-05-02", "kind": "moshi", "title": "全国公開模擬試験 第1回", "time": "9:30", "sub": "本試験と同形式"}, {"date": "2027-05-09", "kind": "tanren", "title": "ファイナル編 第5回", "time": "9:30", "sub": "午前択一科目／択一35問＋記述2問"}, {"date": "2027-05-16", "kind": "tanren", "title": "ファイナル編 第6回", "time": "9:30", "sub": "午後択一科目／択一35問＋記述2問"}, {"date": "2027-05-23", "kind": "tanren", "title": "ファイナル編 第7回", "time": "9:30", "sub": "午前択一科目／択一35問＋記述2問"}, {"date": "2027-05-30", "kind": "tanren", "title": "ファイナル編 第8回", "time": "9:30", "sub": "午後択一科目／択一35問＋記述2問"}, {"date": "2027-06-06", "kind": "moshi", "title": "全国公開模擬試験 第2回", "time": "9:30", "sub": "本試験と同形式"}, {"date": "2027-06-13", "kind": "moshi", "title": "全国スーパー公開模擬試験 第1回", "time": "9:30", "sub": "本試験と同形式"}, {"date": "2027-06-20", "kind": "moshi", "title": "全国スーパー公開模擬試験 第2回", "time": "9:30", "sub": "本試験と同形式"}, {"date": "2027-07-04", "kind": "honshi", "title": "令和9年度 司法書士筆記試験（見込み）", "time": "9:30", "sub": "午前 9:30–11:30 ／ 午後 13:00–16:00　※日程未発表・例年7月第1日曜"}], "vol": {"1": {"name": "民法〈総則・債権〉", "total": 186, "color": "#8C6A4A"}, "2": {"name": "民法〈物権・担保物権〉", "total": 232, "color": "#A6392E"}, "3": {"name": "民法〈親族・相続〉", "total": 105, "color": "#B5793A"}, "4": {"name": "不動産登記法Ⅰ", "total": 230, "color": "#4F6B3A"}, "5": {"name": "不動産登記法Ⅱ", "total": 186, "color": "#2F6B5E"}, "6": {"name": "商法・会社法", "total": 174, "color": "#2F4E7E"}, "7": {"name": "商業登記法", "total": 141, "color": "#4B3F72"}, "8": {"name": "民事訴訟法・民事執行法・民事保全法", "total": 182, "color": "#7A3A5E"}, "9": {"name": "供託法・司法書士法", "total": 101, "color": "#6B6B4F"}, "10": {"name": "刑法・憲法", "total": 150, "color": "#3A3D45"}}, "done": {"1": 186, "2": 215}};
+const WD=["日","月","火","水","木","金","土"],MARU=["①","②","③","④","⑤","⑥","⑦","⑧","⑨","⑩"];
+const K1="shihoshoshi:log:v2",K23="shihoshoshi:r23:v1",KE="shihoshoshi:events:v1";
+const HON="2027-07-04",BASE=344;
+const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const TODAY=iso(new Date());
+const by1={},by2={},by3={},evBy={};
+D.d1.forEach(x=>by1[x.date]=x); D.d2.forEach(x=>by2[x.date]=x); D.d3.forEach(x=>by3[x.date]=x);
+D.events.forEach((e,i)=>{e.id=e.date+"#"+i;(evBy[e.date]=evBy[e.date]||[]).push(e);});
+let ck=new Set(), r23=new Set(), ev=new Set(), sel=null;
+const st=document.getElementById("status");
+const mem={};let where="メモリ";
+const S={async g(k){if(window.storage){try{const r=await window.storage.get(k,false);where="Claude内";return r?r.value:null}catch(e){where="Claude内";return null}}
+try{const v=localStorage.getItem(k);localStorage.setItem("__t","1");localStorage.removeItem("__t");where="このブラウザ";return v}catch(e){return mem[k]??null}},
+async s(k,v){if(window.storage){await window.storage.set(k,v,false);return}try{localStorage.setItem(k,v)}catch(e){mem[k]=v;throw e}},
+async d(k){if(window.storage){try{await window.storage.delete(k,false)}catch(e){}return}try{localStorage.removeItem(k)}catch(e){delete mem[k]}}};
+async function load(){const p=async(k)=>{try{const v=await S.g(k);const a=v?JSON.parse(v):[];return new Set(Array.isArray(a)?a:[])}catch(e){return new Set()}};
+ck=await p(K1); r23=await p(K23); ev=await p(KE);}
+let tm=null;function save(){clearTimeout(tm);tm=setTimeout(async()=>{try{
+await S.s(K1,JSON.stringify([...ck]));await S.s(K23,JSON.stringify([...r23]));await S.s(KE,JSON.stringify([...ev]));
+st.textContent="保存しました（"+where+"）。"}catch(e){st.textContent="保存できませんでした。"}},250)}
+const P1=[],byd1={};D.d1.forEach(x=>{byd1[x.date]=[];x.chunks.forEach(c=>{for(let q=c.from;q<=c.to;q++){
+const o={key:c.vol+"-"+(c.sec||"")+"-"+q,vol:c.vol,sec:c.sec,q,date:x.date};P1.push(o);byd1[x.date].push(o)}})});
+const ORD={};P1.forEach((p,i)=>ORD[p.key]=i);
+const dd1=d=>byd1[d]?byd1[d].filter(p=>ck.has(p.key)).length:0;
+(function(){const n=Math.round((new Date(HON)-new Date(TODAY))/864e5);
+document.getElementById("count").innerHTML='<div class="n">'+n+'</div><div class="l">日　／　<b>令和9年度 筆記試験</b>　2027年7月4日(日) 見込み</div>'})();
+function lanes(){
+ const c1=ck.size, tot1=P1.length;
+ const c2=[...r23].filter(k=>k[0]==="2").length, c3=[...r23].filter(k=>k[0]==="3").length;
+ const kj=D.events.filter(e=>e.kind==="kijutsu"), kd=kj.filter(e=>ev.has(e.id)).length;
+ const tn=D.events.filter(e=>e.kind==="tanren"||e.kind==="moshi"), td=tn.filter(e=>ev.has(e.id)).length;
+ document.getElementById("lanes").innerHTML=
+ '<div class="lane"><h3>机 ／ 択一1周目・記述・答練</h3><div class="v">'+(BASE+c1)+'<small>/1687問</small></div>'+
+ '<div class="s">択一1周目 '+c1+'/'+tot1+'問　7/18–10/16<br>記述1周目 '+kd+'/39問　10/17–12/1<br>答練・模試 '+td+'/'+tn.length+'回　1/10–6/20</div></div>'+
+ '<div class="lane"><h3>隙間時間 ／ 択一2・3周目</h3><div class="v">'+(c2+c3)+'<small>/'+(D.d2.length+D.d3.length)+'日</small></div>'+
+ '<div class="s">2周目 '+c2+'/'+D.d2.length+'日　8/1–10/30（読む復習）<br>3周目 '+c3+'/'+D.d3.length+'日　10/31–1/29（肢評価）<br>4周目以降は弱点のみ 2月–6月</div></div>';}
+function panel(){const p=document.getElementById("panel");
+ if(!sel){p.innerHTML='<div class="p-date">日付を選ぶと内容が出ます。</div>';return}
+ const dt=new Date(sel+"T00:00:00");let h='<div class="p-date"><b>'+(dt.getMonth()+1)+'月'+dt.getDate()+'日</b>（'+WD[dt.getDay()]+'）</div>';
+ const a=by1[sel],b=by2[sel],c=by3[sel],es=evBy[sel]||[];
+ if(a){h+='<div class="sec">机 ／ 択一1周目</div>';
+  if(a){h+=a.chunks.map(x=>{const v=D.vol[x.vol];return '<div class="d-row"><i style="background:'+v.color+'"></i><span>1周目 '+MARU[x.vol-1]+(x.sec||v.name)+'</span><span class="rng">第'+x.from+'–'+x.to+'問</span></div>'}).join("")}
   }
-  if(evs.length){ h+=evs.map(e=>'<div class="e-row"><div class="tm">'+e.time+'</div><div class="bd">'+
-      '<div class="ti">'+e.title+'</div><div class="sb">'+e.sub+'</div></div>'+
-      '<button class="tg" data-ev="'+e.id+'" aria-pressed="'+evDone.has(e.id)+'">'+(evDone.has(e.id)?"受けた":"未")+'</button></div>').join("");
-  }
-  if(!d && !evs.length) h+='<div class="sb" style="font-size:12px;color:var(--ink-35)">予定なし</div>';
-  if(d){ const n=dayDone(sel);
-    h+='<div class="rec"><button class="primary" id="bAll">この日を全部チェック</button>'+
-      '<button class="ghost" id="bNone">全部外す</button><button class="ghost" id="bJump">1問ずつ開く</button>'+
-      '<span class="prog"><b>'+n+'</b> / '+d.count+'問</span></div>'; }
-  p.innerHTML=h;
-  if(d){ document.getElementById("bAll").onclick=()=>{ byDayProbs[sel].forEach(x=>checked.add(x.key)); save(); render(); };
-    document.getElementById("bNone").onclick=()=>{ byDayProbs[sel].forEach(x=>checked.delete(x.key)); save(); render(); };
-    document.getElementById("bJump").onclick=()=>{ sw(1); const el=document.getElementById("day-"+sel); if(el) el.scrollIntoView({behavior:"smooth",block:"center"}); }; }
-}
+ if(b||c){h+='<div class="sec">隙間時間 ／ 択一復習</div>';
+  [[b,"2"],[c,"3"]].forEach(([x,r])=>{if(!x)return;const k=r+":"+sel;
+   h+='<div class="d-row"><i style="background:'+D.vol[x.chunks[0].vol].color+'"></i><span>'+r+'周目 '+x.chunks.map(y=>MARU[y.vol-1]+(y.sec||D.vol[y.vol].name)+' 第'+y.from+'–'+y.to).join(" ／ ")+'問</span><button class="tg" data-r="'+k+'" aria-pressed="'+r23.has(k)+'">'+(r23.has(k)?"済":"未")+'</button></div>'})}
+ if(es.length){h+='<div class="sec">机 ／ 記述・答練</div>'+es.map(e=>'<div class="d-row"><i style="background:'+(e.kind==="kijutsu"?"#8C6A4A":(e.kind==="tanren"?"#4B3F72":"#A6392E"))+'"></i><span>'+e.title+'<br><span style="font-size:11px;color:var(--ink-35)">'+e.sub+'</span></span><button class="tg" data-e="'+e.id+'" aria-pressed="'+ev.has(e.id)+'">'+(ev.has(e.id)?"済":"未")+'</button></div>').join("")}
+ if(!a&&!b&&!c&&!es.length)h+='<div class="note">予定なし</div>';
+ if(a){const n=dd1(sel);h+='<div class="rec"><button class="primary" id="bA">1周目 全部チェック</button><button class="ghost" id="bN">外す</button><span class="prog"><b>'+n+'</b> / '+a.count+'問</span></div>'}
+ p.innerHTML=h;
+ if(a){document.getElementById("bA").onclick=()=>{byd1[sel].forEach(x=>ck.add(x.key));save();render()};
+  document.getElementById("bN").onclick=()=>{byd1[sel].forEach(x=>ck.delete(x.key));save();render()}}}
 document.getElementById("panel").addEventListener("click",e=>{
-  const b=e.target.closest("[data-ev]"); if(!b) return;
-  const id=b.dataset.ev; evDone.has(id)?evDone.delete(id):evDone.add(id); save(); render(); });
-
-/* カレンダー 2026/7 – 2027/7 */
-const cal=document.getElementById("cal"); const MONTHS=[];
-for(let y=2026,m=7;!(y===2027&&m===8);){ MONTHS.push([y,m]); m++; if(m>12){m=1;y++;} }
-MONTHS.forEach(([y,m])=>{
-  const sec=document.createElement("section"); sec.className="month";
-  let h='<h2 class="mincho">'+y+'年 '+m+'月</h2><div class="dow">'+WD.map(w=>'<div>'+w+'</div>').join("")+'</div><div class="grid">';
-  const first=new Date(y,m-1,1), days=new Date(y,m,0).getDate();
-  for(let i=0;i<first.getDay();i++) h+='<div class="cell off"></div>';
-  for(let dd=1;dd<=days;dd++){
-    const s=y+"-"+String(m).padStart(2,"0")+"-"+String(dd).padStart(2,"0");
-    const d=byDate[s], evs=evBy[s]||[], dow=new Date(y,m-1,dd).getDay();
-    if(!d && !evs.length){ h+='<div class="cell blank'+(dow===0?' sun':'')+'" data-plain="'+s+'"><div class="dnum">'+dd+'</div></div>'; continue; }
-    let inner='<span class="mark"></span><div class="dnum">'+dd+'</div>';
-    if(d){ inner='<div class="bars">'+d.chunks.map(c=>'<div style="background:'+DATA.vol[c.vol].color+';flex:'+(c.to-c.from+1)+' 0 0"></div>').join("")+'</div>'+inner
-        +'<div class="vols">'+[...new Set(d.chunks.map(c=>MARU[c.vol-1]))].join("")+'</div><div class="qty">'+d.count+'<small>問</small></div>'; }
-    if(evs.length){ inner+='<div class="ev">'+evs.map(e=>'<span class="'+e.kind+'">'+shortName(e)+'</span>').join("")+'</div>'; }
-    h+='<button class="cell'+(dow===0?' sun':'')+(s===HONSHI?' honshiDay':'')+'" data-iso="'+s+'" aria-pressed="false">'+inner+'</button>';
-  }
-  sec.innerHTML=h+'</div>'; cal.appendChild(sec);
-});
-function shortName(e){
-  if(e.kind==="honshi") return "本試験";
-  if(e.kind==="moshi") return e.title.indexOf("スーパー")>=0?"ｽｰﾊﾟｰ模試":"公開模試";
-  const n=e.title.match(/第(\d+)回/)[1];
-  if(e.title.indexOf("択一編")>=0) return "択一"+n;
-  if(e.title.indexOf("記述編")>=0) return "記述"+n;
-  if(e.title.indexOf("実力")>=0) return "実力"+n;
-  return "ﾌｧｲﾅﾙ"+n;
-}
-cal.addEventListener("click",e=>{ const b=e.target.closest("[data-iso],[data-plain]"); if(!b) return;
-  sel=b.dataset.iso||b.dataset.plain; paintPanel(); paintCells(); });
-
-/* 過去問リスト */
-const list=document.getElementById("list");
-(function(){ let out='<div class="jump"><button id="jToday">今日へ</button><button id="jNext">未チェックの先頭へ</button></div>';
-  let wk=[];
-  const flush=()=>{ if(!wk.length) return;
-    const a=new Date(wk[0].date+"T00:00:00"), z=new Date(wk[wk.length-1].date+"T00:00:00");
-    out+='<section class="lweek"><h3>'+(a.getMonth()+1)+'/'+a.getDate()+' – '+(z.getMonth()+1)+'/'+z.getDate()+
-      '　計'+wk.reduce((s,d)=>s+d.count,0)+'問</h3>';
-    wk.forEach(d=>{ const dt=new Date(d.date+"T00:00:00");
-      out+='<div class="lday" id="day-'+d.date+'"><div class="lhead">'+
-        '<div class="ld">'+(dt.getMonth()+1)+'/'+dt.getDate()+'（'+WD[dt.getDay()]+'）</div>'+
-        '<div class="lt">'+d.chunks.map(c=>MARU[c.vol-1]+(c.sec||DATA.vol[c.vol].name)).join(' ／ ')+'</div>'+
-        '<button class="all" data-all="'+d.date+'">全部</button>'+
-        '<div class="lc" data-lc="'+d.date+'">0/'+d.count+'</div></div><div class="chips">';
-      let cur=null;
-      d.chunks.forEach(c=>{ const v=DATA.vol[c.vol], tag=MARU[c.vol-1]+(c.sec||v.name);
-        if(tag!==cur){ out+='<div class="secmark">'+tag+'</div>'; cur=tag; }
-        for(let q=c.from;q<=c.to;q++) out+='<button class="chip" role="checkbox" aria-checked="false" data-key="'+c.vol+'-'+(c.sec||"")+'-'+q+
-          '" data-color="'+v.color+'" aria-label="'+tag+' 第'+q+'問">'+q+'</button>'; });
-      out+='</div></div>'; });
-    out+='</section>'; wk=[]; };
-  DATA.days.forEach(d=>{ if(new Date(d.date+"T00:00:00").getDay()===6 && wk.length) flush(); wk.push(d); });
-  flush(); list.innerHTML=out;
-})();
-list.addEventListener("click",e=>{
-  const c=e.target.closest(".chip");
-  if(c){ const k=c.dataset.key; checked.has(k)?checked.delete(k):checked.add(k); save(); render(); return; }
-  const a=e.target.closest("[data-all]");
-  if(a){ const date=a.dataset.all, all=byDayProbs[date].every(p=>checked.has(p.key));
-    byDayProbs[date].forEach(p=>all?checked.delete(p.key):checked.add(p.key)); save(); render(); } });
-document.getElementById("jToday").onclick=()=>{ const el=document.getElementById("day-"+(byDate[TODAY]?TODAY:DATA.days[0].date)); if(el) el.scrollIntoView({behavior:"smooth",block:"center"}); };
-document.getElementById("jNext").onclick=()=>{ const p=PROBS.find(x=>!checked.has(x.key));
-  if(!p){ status.textContent="全問チェック済みです。おつかれさまでした。"; return; }
-  const el=list.querySelector('.chip[data-key="'+p.key+'"]'); if(el) el.scrollIntoView({behavior:"smooth",block:"center"}); };
-const chipEls=[...list.querySelectorAll(".chip")];
-function paintChips(){ chipEls.forEach(el=>{ const on=checked.has(el.dataset.key);
-  el.setAttribute("aria-checked",on); el.style.background=on?el.dataset.color:""; }); }
-function paintDayCounts(){ DATA.days.forEach(d=>{ const n=dayDone(d.date), el=list.querySelector('[data-lc="'+d.date+'"]');
-  if(!el) return; el.textContent=n+"/"+d.count; el.classList.toggle("full",n>=d.count);
-  document.getElementById("day-"+d.date).classList.toggle("isToday",d.date===TODAY); }); }
-
-/* 答練・模試リスト */
-const sched=document.getElementById("sched");
-(function(){ const groups=[
-    ["必須論点択一編","日 10:30／水道橋本校　演習90分（解説はWeb動画）","択一編"],
-    ["頻出論点記述編","日 13:30／水道橋本校　演習100分（解説はWeb動画）","記述編"],
-    ["実力養成編","日 9:30／水道橋本校　択一35問＋記述2問（180分）","実力養成編"],
-    ["ファイナル編","日 9:30／水道橋本校　本試験と同一問題数","ファイナル編"],
-    ["公開模擬試験","日 9:30／午前9:30–11:30 → 午後13:00–16:00","模擬試験"],
-    ["本試験","","筆記試験"]];
-  let out='<div class="jump"><button id="sToday">直近へ</button></div>';
-  groups.forEach(([name,cap,match])=>{
-    const es=DATA.events.filter(e=>e.title.indexOf(match)>=0); if(!es.length) return;
-    out+='<section class="sgrp"><h3>'+name+'（全'+es.length+'回）</h3>'+(cap?'<div class="cap">'+cap+'</div>':'');
-    es.forEach(e=>{ const dt=new Date(e.date+"T00:00:00");
-      out+='<div class="srow" id="ev-'+e.id+'" data-row="'+e.id+'"><div class="sd">'+(dt.getFullYear()%100)+'/'+(dt.getMonth()+1)+'/'+dt.getDate()+'（'+WD[dt.getDay()]+'）</div>'+
-        '<div class="st">'+e.title.replace(/（.*/,"")+'<em>'+e.time+'　'+e.sub+'</em></div>'+
-        '<button class="sb" data-ev="'+e.id+'" aria-pressed="false">未</button></div>'; });
-    out+='</section>'; });
-  sched.innerHTML=out;
-  sched.addEventListener("click",ev=>{ const b=ev.target.closest("[data-ev]"); if(!b) return;
-    const id=b.dataset.ev; evDone.has(id)?evDone.delete(id):evDone.add(id); save(); render(); });
-  document.getElementById("sToday").onclick=()=>{ const e=DATA.events.find(x=>x.date>=TODAY);
-    if(e){ const el=document.getElementById("ev-"+e.id); if(el) el.scrollIntoView({behavior:"smooth",block:"center"}); } };
-})();
-function paintSched(){ DATA.events.forEach(e=>{ const row=document.getElementById("ev-"+e.id); if(!row) return;
-  const on=evDone.has(e.id); row.classList.toggle("done",on);
-  const b=row.querySelector("[data-ev]"); b.setAttribute("aria-pressed",on); b.textContent=on?"受けた":"未"; }); }
-
-function paintCells(){ document.querySelectorAll(".cell[data-iso],.cell[data-plain]").forEach(b=>{
-  const s=b.dataset.iso||b.dataset.plain;
-  b.setAttribute("aria-pressed",s===sel); b.classList.toggle("today",s===TODAY);
-  const d=byDate[s]; if(d){ const n=dayDone(s);
-    b.classList.toggle("done",n>=d.count); b.classList.toggle("part",n>0&&n<d.count);
-    b.querySelector(".mark").textContent=n===0?"":(n>=d.count?"済":n+"問"); }
-  const evs=evBy[s]; if(evs) b.classList.toggle("evdone",evs.every(e=>evDone.has(e.id))); }); }
-function render(){ paintTrack(); paintShelf(); paintPanel(); paintChips(); paintDayCounts(); paintSched(); paintCells(); }
-
-const tabs=[document.getElementById("tabCal"),document.getElementById("tabList"),document.getElementById("tabSched")];
-const views=[cal,list,sched];
-function sw(i){ tabs.forEach((b,j)=>b.setAttribute("aria-selected",i===j));
-  cal.classList.toggle("off",i!==0); list.classList.toggle("on",i===1); sched.classList.toggle("on",i===2); }
-tabs.forEach((b,i)=>b.onclick=()=>sw(i));
-
-document.getElementById("exp").onclick=async()=>{ const s=JSON.stringify({p:[...checked],e:[...evDone]});
-  try{ await navigator.clipboard.writeText(s); status.textContent="記録をコピーしました。控えとして保存しておけます。"; }
-  catch(e){ prompt("この文字列を控えておいてください",s); } };
-document.getElementById("imp").onclick=async()=>{ const s=prompt("控えておいた記録を貼り付けてください"); if(!s) return;
-  try{ const o=JSON.parse(s); checked=new Set(o.p||[]); evDone=new Set(o.e||[]); save(); render(); status.textContent="記録を読み込みました。"; }
-  catch(e){ status.textContent="読み込めませんでした。文字列を確認してください。"; } };
-document.getElementById("reset").onclick=async()=>{ if(!confirm("記録をすべて消します。よろしいですか？")) return;
-  checked=new Set(); evDone=new Set(); await store.del(KEY); await store.del(EKEY); render(); status.textContent="記録を消しました。"; };
-
-(async()=>{ await load(); sel=byDate[TODAY]||evBy[TODAY]?TODAY:DATA.days[0].date; render();
-  status.textContent="記録は"+where+"に保存されます。"; })();
-</script>
-</body>
-</html>
+ const r=e.target.closest("[data-r]");if(r){const k=r.dataset.r;r23.has(k)?r23.delete(k):r23.add(k);save();render();return}
+ const x=e.target.closest("[data-e]");if(x){const k=x.dataset.e;ev.has(k)?ev.delete(k):ev.add(k);save();render()}});
+const v0=document.getElementById("v0");
+(function(){const M=[];for(let y=2026,m=7;!(y===2027&&m===8);){M.push([y,m]);m++;if(m>12){m=1;y++}}
+ let out="";M.forEach(([y,m])=>{out+='<section class="month"><h2 class="mincho">'+y+'年 '+m+'月</h2><div class="dow">'+WD.map(w=>'<div>'+w+'</div>').join("")+'</div><div class="grid">';
+ const f=new Date(y,m-1,1),n=new Date(y,m,0).getDate();
+ for(let i=0;i<f.getDay();i++)out+='<div class="cell off"></div>';
+ for(let dd=1;dd<=n;dd++){const s=y+"-"+String(m).padStart(2,"0")+"-"+String(dd).padStart(2,"0");
+  const a=by1[s],b=by2[s],c=by3[s],es=evBy[s]||[],w=new Date(y,m-1,dd).getDay();
+  if(!a&&!b&&!c&&!es.length){out+='<div class="cell blank'+(w===0?' sun':'')+'" data-d="'+s+'"><div class="dnum">'+dd+'</div></div>';continue}
+  let h='<span class="done1"></span><div class="dnum">'+dd+'</div>';
+  [[a,"1"],[b,"2"],[c,"3"]].forEach(([x,r])=>{if(!x)return;const v=D.vol[x.chunks[0].vol];
+   h+='<div class="row"><span class="dot" style="background:'+v.color+'"></span><b>'+r+'</b>'+MARU[x.chunks[0].vol-1]+'<b style="margin-left:auto">'+x.count+'</b></div>'});
+  if(es.length)h+='<div class="ev">'+es.map(e=>'<span class="'+e.kind+'">'+sn(e)+'</span>').join("")+'</div>';
+  out+='<button class="cell'+(w===0?' sun':'')+'" data-d="'+s+'" aria-pressed="false">'+h+'</button>'}
+ out+='</div></section>'});v0.innerHTML=out})();
+function sn(e){if(e.kind==="honshi")return"本試験";if(e.kind==="moshi")return e.title.includes("スーパー")?"ｽｰﾊﾟｰ模試":"公開模試";
+ if(e.kind==="kijutsu")return e.title.includes("不動産")?"記述不登":"記述商登";
+ const n=e.title.match(/第(\d+)回/)[1];return(e.title.includes("実力")?"実力":"ﾌｧｲﾅﾙ")+n}
+v0.addEventListener("click",e=>{const b=e.target.closest("[data-d]");if(b){sel=b.dataset.d;panel();cells()}});
+const v1=document.getElementById("v1");
+(function(){let o='<div class="jump"><button id="j1">今日へ</button><button id="j2">未チェックの先頭へ</button></div>';
+ o+='<section class="grp"><h3>択一 1周目（平日16・土20／日 予備）</h3><div class="cap">7/18–10/16　机・書き込みあり／1問ずつチェック</div>';
+ D.d1.forEach(x=>{const dt=new Date(x.date+"T00:00:00");
+  o+='<div class="lday" id="d-'+x.date+'"><div class="lhead"><div class="ld">'+(dt.getMonth()+1)+'/'+dt.getDate()+'（'+WD[dt.getDay()]+'）</div>'+
+  '<div class="lt">'+x.chunks.map(c=>MARU[c.vol-1]+(c.sec||D.vol[c.vol].name)).join(' ／ ')+'</div>'+
+  '<button class="all" data-all="'+x.date+'">全部</button><div class="lc" data-lc="'+x.date+'">0/'+x.count+'</div></div><div class="chips">';
+  let cur=null;x.chunks.forEach(c=>{const v=D.vol[c.vol],t=MARU[c.vol-1]+(c.sec||v.name);
+   if(t!==cur){o+='<div class="secmark">'+t+'</div>';cur=t}
+   for(let q=c.from;q<=c.to;q++)o+='<button class="chip" role="checkbox" aria-checked="false" data-k="'+c.vol+'-'+(c.sec||"")+'-'+q+'" data-c="'+v.color+'">'+q+'</button>'});
+  o+='</div></div>'});o+='</section>';
+ v1.innerHTML=o;
+ v1.addEventListener("click",e=>{const c=e.target.closest(".chip");
+  if(c){const k=c.dataset.k;ck.has(k)?ck.delete(k):ck.add(k);save();render();return}
+  const a=e.target.closest("[data-all]");if(a){const d=a.dataset.all,all=byd1[d].every(p=>ck.has(p.key));
+   byd1[d].forEach(p=>all?ck.delete(p.key):ck.add(p.key));save();render();return}
+  const r=e.target.closest("[data-r]");if(r){const k=r.dataset.r;r23.has(k)?r23.delete(k):r23.add(k);save();render()}});
+ document.getElementById("j1").onclick=()=>{const el=document.getElementById("d-"+TODAY)||document.getElementById("d-"+D.d1[0].date);if(el)el.scrollIntoView({behavior:"smooth",block:"center"})};
+ document.getElementById("j2").onclick=()=>{const p=P1.find(x=>!ck.has(x.key));if(!p){st.textContent="1周目 全問チェック済みです。";return}
+  const el=v1.querySelector('.chip[data-k="'+p.key+'"]');if(el)el.scrollIntoView({behavior:"smooth",block:"center"})}})();
+const v2=document.getElementById("v2");
+(function(){let o='<div class="jump"><button id="j4">直近へ</button></div>';
+ [["2",D.d2,"択一 2周目（平日21・土26）","8/1–10/30　隙間時間・読む復習／評価なし"],
+  ["3",D.d3,"択一 3周目（平日21・土26）","10/31–1/29　隙間時間・肢ごとに5段階評価"]].forEach(([r,arr,t,cap])=>{
+  o+='<section class="grp"><h3>'+t+'</h3><div class="cap">'+cap+'</div>';
+  arr.forEach(x=>{const dt=new Date(x.date+"T00:00:00"),k=r+":"+x.date;
+   o+='<div class="srow" id="r-'+k+'"><div class="sd">'+(dt.getMonth()+1)+'/'+dt.getDate()+'（'+WD[dt.getDay()]+'）</div>'+
+   '<div class="st">'+x.chunks.map(c=>MARU[c.vol-1]+(c.sec||D.vol[c.vol].name)+' 第'+c.from+'–'+c.to+'問').join(' ／ ')+'<em>'+x.count+'問</em></div>'+
+   '<button class="sb" data-r="'+k+'" aria-pressed="false">未</button></div>'});o+='</section>'});
+ o+='<div class="note">4周目以降（2月–6月）は3周目の評価が出てから、評価の低い肢だけを対象に組みます。</div>';
+ v2.innerHTML=o;
+ v2.addEventListener("click",e=>{const b=e.target.closest("[data-r]");if(!b)return;
+  const k=b.dataset.r;r23.has(k)?r23.delete(k):r23.add(k);save();render()});
+ document.getElementById("j4").onclick=()=>{const x=D.d2.find(y=>y.date>=TODAY)||D.d3.find(y=>y.date>=TODAY);
+  if(x){const el=document.getElementById("r-2:"+x.date)||document.getElementById("r-3:"+x.date);if(el)el.scrollIntoView({behavior:"smooth",block:"center"})}}})();
+(function(){let o='<div class="jump"><button id="j3">直近へ</button></div>';
+ [["記述式 過去問 1周目","平日1問・土1問／⑪不動産登記法20年分 → ⑫商業登記法19年分","kijutsu"],
+  ["実力養成編（全12回）","日 9:30／水道橋　択一35問＋記述2問","実力養成編"],
+  ["ファイナル編（全8回）","日 9:30／水道橋　本試験と同一問題数","ファイナル編"],
+  ["公開模擬試験（全4回）","日 9:30／午前9:30–11:30 → 午後13:00–16:00","模擬試験"],
+  ["本試験","","筆記試験"]].forEach(([t,cap,m])=>{
+  const es=D.events.filter(e=>m==="kijutsu"?e.kind==="kijutsu":e.title.includes(m));if(!es.length)return;
+  o+='<section class="grp"><h3>'+t+'</h3>'+(cap?'<div class="cap">'+cap+'</div>':'');
+  es.forEach(e=>{const dt=new Date(e.date+"T00:00:00");
+   o+='<div class="srow" id="e-'+e.id+'"><div class="sd">'+(dt.getFullYear()%100)+'/'+(dt.getMonth()+1)+'/'+dt.getDate()+'（'+WD[dt.getDay()]+'）</div>'+
+   '<div class="st">'+e.title.replace(/（.*/,"")+'<em>'+e.sub+'</em></div><button class="sb" data-e="'+e.id+'" aria-pressed="false">未</button></div>'});
+  o+='</section>'});
+ o+='<div class="note">記述式の2周目以降は1周目の手応えを見てから組みます。1月からの実力養成編12回・ファイナル編8回・模試4回で記述48問を解くので、過去問の周回と合わせると量は足ります。</div>';
+ v1.innerHTML+=o;
+ v1.addEventListener("click",e=>{const b=e.target.closest("[data-e]");if(!b)return;
+  const k=b.dataset.e;ev.has(k)?ev.delete(k):ev.add(k);save();render()});
+ document.getElementById("j3").onclick=()=>{const e=D.events.find(x=>x.date>=TODAY);if(e){const el=document.getElementById("e-"+e.id);if(el)el.scrollIntoView({behavior:"smooth",block:"center"})}}})();
+const chips=[...v1.querySelectorAll(".chip")];
+function cells(){document.querySelectorAll("[data-d]").forEach(b=>{const s=b.dataset.d;
+ b.setAttribute("aria-pressed",s===sel);b.classList.toggle("today",s===TODAY);
+ const m=b.querySelector(".done1");if(!m)return;const a=by1[s];
+ m.textContent=a?(dd1(s)>=a.count?"済":(dd1(s)>0?dd1(s):"")):""})}
+function render(){lanes();panel();
+ chips.forEach(el=>{const on=ck.has(el.dataset.k);el.setAttribute("aria-checked",on);el.style.background=on?el.dataset.c:""});
+ D.d1.forEach(x=>{const n=dd1(x.date),el=v1.querySelector('[data-lc="'+x.date+'"]');if(!el)return;
+  el.textContent=n+"/"+x.count;el.classList.toggle("full",n>=x.count);
+  document.getElementById("d-"+x.date).classList.toggle("isToday",x.date===TODAY)});
+ [...v2.querySelectorAll("[data-r]"),...document.querySelectorAll(".panel [data-r]")].forEach(b=>{
+  const on=r23.has(b.dataset.r);b.setAttribute("aria-pressed",on);b.textContent=on?"済":"未";
+  const row=document.getElementById("r-"+b.dataset.r);if(row)row.classList.toggle("done",on)});
+ D.events.forEach(e=>{const row=document.getElementById("e-"+e.id);if(!row)return;const on=ev.has(e.id);
+  row.classList.toggle("done",on);const b=row.querySelector("[data-e]");b.setAttribute("aria-pressed",on);b.textContent=on?"済":"未"});
+ cells()}
+const tb=[...document.querySelectorAll(".tabs button")],vw=[v0,v1,v2];
+tb.forEach((b,i)=>b.onclick=()=>{tb.forEach((x,j)=>x.setAttribute("aria-selected",i===j));vw.forEach((v,j)=>v.classList.toggle("on",i===j))});
+document.getElementById("exp").onclick=async()=>{const s=JSON.stringify({p:[...ck],r:[...r23],e:[...ev]});
+ try{await navigator.clipboard.writeText(s);st.textContent="記録をコピーしました。"}catch(e){prompt("控えておいてください",s)}};
+document.getElementById("imp").onclick=()=>{const s=prompt("控えを貼り付けてください");if(!s)return;
+ try{const o=JSON.parse(s);ck=new Set(o.p||[]);r23=new Set(o.r||[]);ev=new Set(o.e||[]);save();render();st.textContent="読み込みました。"}
+ catch(e){st.textContent="読み込めませんでした。"}};
+document.getElementById("rst").onclick=async()=>{if(!confirm("記録をすべて消します。よろしいですか？"))return;
+ ck=new Set();r23=new Set();ev=new Set();await S.d(K1);await S.d(K23);await S.d(KE);render();st.textContent="記録を消しました。"};
+(async()=>{await load();sel=(by1[TODAY]||by2[TODAY]||by3[TODAY]||evBy[TODAY])?TODAY:D.d1[0].date;render();
+ st.textContent="記録は"+where+"に保存されます。"})();
+</script></body></html>
