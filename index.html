@@ -371,8 +371,8 @@ function routine(s){
  else bufs.push([11*60,18*60,"空き（バッファー）"]);
  const ds=[["06:30","08:00","朝"],["18:00","21:00",hol?"夜":"田町"]];
  split(dq,[90,180]).forEach((qs,i)=>{if(qs.length)push(ds[i][0],ds[i][1],"desk",ds[i][2],qs)});
- const gs=hol?[["09:00","11:00","休日"]]:[["06:15","06:25","電車"],["12:00","12:45","昼休み"],["17:30","18:00","電車"],["21:00","21:40","電車"]];
- split(gq,hol?[1]:[10,45,30,40]).forEach((qs,i)=>{if(qs.length)push(gs[i][0],gs[i][1],"gap",gs[i][2],qs)});
+ const gs=hol?[["09:00","11:00","休日"]]:[["05:30","06:30","早朝"],["12:00","12:45","昼休み"],["17:30","18:00","電車"],["21:00","21:40","電車"]];
+ split(gq,hol?[1]:[60,45,30,40]).forEach((qs,i)=>{if(qs.length)push(gs[i][0],gs[i][1],"gap",gs[i][2],qs)});
  bufs.push([21*60,H1*60,"バッファー"]);return{B,bufs}}
 function vblock(b,s,i){const top=(b.a-H0*60)/60,ht=(b.b-b.a)/60;
  const st='top:calc(var(--px)*'+top.toFixed(3)+');height:calc(var(--px)*'+ht.toFixed(3)+' - 1px)';
@@ -415,7 +415,7 @@ function build3(){if(v3.dataset.b)return;v3.dataset.b=1;
   onPanelClick(e)});
  vrender();scrollToday();
  const wr=v3.querySelector(".vt-wrap"),px=v3.querySelector(".vcol").offsetHeight/24,nw=new Date();
- const h0=(wk<=TODAY&&TODAY<=addDays(wk,6))?Math.max(0,Math.min(nw.getHours()-1.5,17)):6;wr.scrollTop=Math.max(0,h0*px)}
+ const h0=(wk<=TODAY&&TODAY<=addDays(wk,6))?Math.max(0,Math.min(nw.getHours()-1.5,17)):5;wr.scrollTop=Math.max(0,h0*px)}
 /* ---- block sheet ---- */
 let sheetKey=null;const sheet=document.createElement("div");sheet.className="sheet";sheet.hidden=true;sheet.setAttribute("role","dialog");document.body.appendChild(sheet);
 const hm=m=>Math.floor(m/60)+":"+pad(m%60);
