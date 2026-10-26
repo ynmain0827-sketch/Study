@@ -104,17 +104,17 @@ color:var(--ink-60);border-radius:2px;display:flex;align-items:center;justify-co
 .vnav .wk{font-family:"Shippori Mincho B1",serif;font-weight:700;font-size:13px;flex:1;min-width:0;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .vnav button{flex:none}
 .vax span:first-child{transform:none}.vax span:last-child{transform:translateY(-100%)}
-.vt-wrap{overflow-x:auto;border:1px solid var(--ink);background:var(--paper-3);-webkit-overflow-scrolling:touch}
+.vt-wrap{overflow:auto;max-height:72vh;border:1px solid var(--ink);background:var(--paper-3);-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
 .vt{display:grid;grid-template-columns:30px repeat(7,minmax(74px,1fr));min-width:548px}
 .vh{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--ink);border-left:1px solid var(--rule);
 padding:4px 3px 3px;font-size:10px;text-align:center;line-height:1.25;cursor:pointer;z-index:3}
-.vh:first-child{border-left:0;cursor:default}
+.vh:first-child{border-left:0;cursor:default;position:sticky;left:0;z-index:5}
 .vh b{display:block;font-family:"Shippori Mincho B1",serif;font-size:13px}
 .vh.sun,.vh.hol{color:var(--shu)}.vh .hn{display:block;font-size:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .vh.today{background:var(--ink);color:var(--paper)}.vh.sel{box-shadow:inset 0 -3px 0 var(--shu)}
-.vax{position:relative;height:calc(var(--px)*16)}
+.vax{position:sticky;left:0;z-index:3;background:var(--paper-3);height:calc(var(--px)*24);border-right:1px solid var(--rule)}
 .vax span{position:absolute;right:3px;font-size:9px;color:var(--ink-35);transform:translateY(-50%)}
-.vcol{position:relative;height:calc(var(--px)*16);border-left:1px solid var(--rule);
+.vcol{position:relative;height:calc(var(--px)*24);border-left:1px solid var(--rule);
 background-image:repeating-linear-gradient(to bottom,transparent 0,transparent calc(var(--px) - 1px),var(--rule) calc(var(--px) - 1px),var(--rule) var(--px))}
 .vcol.today{background-color:rgba(166,57,46,.04)}
 .vbuf{position:absolute;left:0;right:0;background:repeating-linear-gradient(-45deg,rgba(166,57,46,.10) 0 4px,transparent 4px 9px);z-index:0}
@@ -136,6 +136,16 @@ font-size:9px;line-height:1.22;text-align:left;border:1px solid transparent;disp
 .vb.tiny{padding-top:0;padding-bottom:0;line-height:1.05}.vb.tiny .k,.vb.tiny .n{display:none}
 .vb.tiny .c{font-size:8px;white-space:nowrap}
 .vb.short .k,.vb.short .n{display:none}.vb.short .c{font-size:8.5px;line-height:1.15}
+.vb .dots{display:flex;flex-wrap:wrap;gap:2px;margin-top:2px}.vb .dots i{width:6px;height:6px;border:1px solid var(--ink-35);border-radius:1px;background:#fff}
+.vb.tiny .dots{display:none}.vb.short .dots{margin-top:1px}
+.vb.open{outline:2px solid var(--shu);outline-offset:-1px;z-index:2}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--paper);border-top:2px solid var(--ink);box-shadow:0 -8px 20px rgba(22,24,28,.14);max-height:55vh;overflow:auto;padding:10px 14px calc(16px + env(safe-area-inset-bottom))}
+.sheet[hidden]{display:none}.sheet .in{max-width:1092px;margin:0 auto}
+.sh-h{display:flex;align-items:center;gap:8px;margin-bottom:2px}.sh-h b{font-family:"Shippori Mincho B1",serif;font-size:15px}
+.sh-h .x{margin-left:auto;background:transparent;border:1px solid var(--ink);font-size:12px;padding:3px 11px}
+.sh-s{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--ink-60);margin-bottom:6px}
+.sh-s .all{background:transparent;border:1px solid var(--rule);font-size:10px;padding:2px 8px;color:var(--ink-60)}
+.sh-s .lc{font-weight:700;color:var(--ink);font-size:12px}.sh-s .lc.full{color:var(--ao)}
 .vnow{position:absolute;left:0;right:0;height:0;border-top:2px solid var(--shu);z-index:2;pointer-events:none}
 .vnow::before{content:"";position:absolute;left:-3px;top:-4px;width:6px;height:6px;border-radius:50%;background:var(--shu)}
 .vlegend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:10px;color:var(--ink-60);margin:8px 0}
@@ -323,7 +333,7 @@ function cells(){document.querySelectorAll(".cell[data-d]").forEach(b=>{const s=
  m.textContent=xs.length&&xs.every(x=>nDone(x.qs)>=x.count)?"済":""})}
 /* ---- vertical (week x time) ---- */
 const v3=document.getElementById("v3");
-const H0=6,H1=22,tm2=t=>{const[a,b]=t.split(":").map(Number);return a*60+b};
+const H0=0,H1=24,tm2=t=>{const[a,b]=t.split(":").map(Number);return a*60+b};
 const WEEK_MIN=iso(new Date(2026,9,19)),WEEK_MAX=iso(new Date(2027,5,28));
 function monday(s){const d=dOf(s),k=(d.getDay()+6)%7;d.setDate(d.getDate()-k);return iso(d)}
 function addDays(s,n){const d=dOf(s);d.setDate(d.getDate()+n);return iso(d)}
@@ -340,11 +350,11 @@ function routine(s){
  const es=evBy[s]||[],kij=es.find(e=>e.kind==="kijutsu"),sei=es.find(e=>e.kind==="seiri"),exam=es.find(e=>e.kind==="moshi"||e.kind==="honshi");
  const after=s>TARGET;
  const push=(a,b,type,k,qs,extra)=>B.push(Object.assign({a:tm2(a),b:tm2(b),type,k,qs:qs||null},extra||{}));
- if(w===0){bufs.push([H0*60,H1*60,"バッファー"]);
+ if(w===0){bufs.push([6*60,H1*60,"バッファー"]);
   if(exam)push("09:30","16:00","exam",exam.kind==="honshi"?"本試験":"模試",null,{c:sn(exam),eid:exam.id});
   return{B,bufs}}
  if(w===6){
-  if(after||(!dq.length&&!gq.length)){bufs.push([H0*60,H1*60,after?"バッファー期間":"予定なし"]);return{B,bufs}}
+  if(after||(!dq.length&&!gq.length)){bufs.push([6*60,H1*60,after?"バッファー期間":"予定なし"]);return{B,bufs}}
   const koma=[["07:00","09:00","1コマ"],["09:30","11:30","2コマ"],["12:30","14:30","3コマ"],["15:00","17:00","4コマ"]];
   const useK=kij&&s>=R3,useS=!!sei;
   const dslots=koma.filter((k,i)=>!(i===2&&useK)&&!(i===3&&useS));
@@ -364,16 +374,17 @@ function routine(s){
  const gs=hol?[["09:00","11:00","休日"]]:[["06:15","06:25","電車"],["12:00","12:45","昼休み"],["17:30","18:00","電車"],["21:00","21:40","電車"]];
  split(gq,hol?[1]:[10,45,30,40]).forEach((qs,i)=>{if(qs.length)push(gs[i][0],gs[i][1],"gap",gs[i][2],qs)});
  bufs.push([21*60,H1*60,"バッファー"]);return{B,bufs}}
-function vblock(b,s){const top=(b.a-H0*60)/60,ht=(b.b-b.a)/60;
+function vblock(b,s,i){const top=(b.a-H0*60)/60,ht=(b.b-b.a)/60;
  const st='top:calc(var(--px)*'+top.toFixed(3)+');height:calc(var(--px)*'+ht.toFixed(3)+' - 1px)';
  if(b.type==="work"||b.type==="off")return '<div class="vb '+b.type+'" style="'+st+'"><span class="c" style="font-weight:400">'+esc(b.k)+'</span></div>';
  let n="",done=false,c=esc(b.c||""),k=esc(b.k);
  if(b.qs){const d=nDone(b.qs);n=d+"/"+b.qs.length;done=d>=b.qs.length;const t=rtext(b.qs);c=t.c;k+="・"+t.r}
  else if(b.eid){done=ev.has(b.eid);n=done?"済":""}
  const tiny=ht<0.4,short=!tiny&&ht<0.8;
- const col=b.qs&&b.qs.length?D.vol[b.qs[0].vol].color:"";
- return '<button class="vb '+b.type+(done?' done':'')+(tiny?' tiny':short?' short':'')+'" data-vd="'+s+'" style="'+st+(col?';border-left-color:'+col:'')+'">'+
- '<span class="k">'+k+'</span><span class="c">'+c+'</span>'+(n?'<span class="n">'+n+'</span>':'')+'</button>'}
+ const col=b.qs&&b.qs.length?D.vol[b.qs[0].vol].color:"",id=s+'|'+i;
+ const dots=b.qs?'<span class="dots">'+b.qs.map(o=>'<i'+(ck.has(o.key)?' style="background:'+D.vol[o.vol].color+';border-color:transparent"':'')+'></i>').join("")+'</span>':'';
+ return '<button class="vb '+b.type+(done?' done':'')+(tiny?' tiny':short?' short':'')+(id===sheetKey?' open':'')+'" data-vb="'+id+'" style="'+st+(col?';border-left-color:'+col:'')+'">'+
+ '<span class="k">'+k+'</span><span class="c">'+c+'</span>'+(n?'<span class="n">'+n+'</span>':'')+dots+'</button>'}
 function vrender(){if(!v3.dataset.b)return;
  const days=[...Array(7)].map((_,i)=>addDays(wk,i));
  const a=dOf(days[0]),z=dOf(days[6]);
@@ -384,7 +395,7 @@ function vrender(){if(!v3.dataset.b)return;
  const now=new Date(),nm=now.getHours()*60+now.getMinutes();
  days.forEach(s=>{const{B,bufs}=routine(s);
   h+='<div class="vcol'+(s===TODAY?' today':'')+'">'+bufs.map(([a,b,l])=>'<div class="vbuf" style="top:calc(var(--px)*'+((a-H0*60)/60).toFixed(3)+');height:calc(var(--px)*'+((b-a)/60).toFixed(3)+')"><span>'+l+'</span></div>').join("")+
-  B.map(b=>vblock(b,s)).join("")+(s===TODAY&&nm>=H0*60&&nm<=H1*60?'<div class="vnow" style="top:calc(var(--px)*'+((nm-H0*60)/60).toFixed(3)+')"></div>':'')+'</div>'});
+  B.map((b,i)=>vblock(b,s,i)).join("")+(s===TODAY&&nm>=H0*60&&nm<=H1*60?'<div class="vnow" style="top:calc(var(--px)*'+((nm-H0*60)/60).toFixed(3)+')"></div>':'')+'</div>'});
  v3.querySelector(".vt").innerHTML=h;
  document.getElementById("vpanel").innerHTML=panelHTML(sel)}
 function vsel(){if(!v3.dataset.b)return;v3.querySelectorAll(".vh[data-vd]").forEach(el=>el.classList.toggle("sel",el.dataset.vd===sel));document.getElementById("vpanel").innerHTML=panelHTML(sel)}
@@ -394,20 +405,45 @@ function build3(){if(v3.dataset.b)return;v3.dataset.b=1;
  '<div class="vlegend"><span><i style="background:#fff;border:1px solid #16181C;border-left-width:3px"></i>机</span><span><i style="background:rgba(255,255,255,.65);border:1px dashed rgba(22,24,28,.35)"></i>隙間</span>'+
  '<span><i style="background:#8C6A4A"></i>記述</span><span><i style="background:rgba(47,107,94,.16);border:1px solid rgba(47,107,94,.4)"></i>整理</span>'+
  '<span><i style="background:repeating-linear-gradient(-45deg,rgba(166,57,46,.25) 0 3px,transparent 3px 6px)"></i>バッファー</span></div>'+
- '<div class="note" style="padding-top:0">ブロックをタップするとその日の内容が下に出ます。仕事と昼休みの時刻は仮置き。祝日・年末年始も平日と同じ問題数で、空いた時間はバッファーです。</div>'+
+ '<div class="note" style="padding-top:0">ブロックをタップすると、その時間の問題が下から出ます。解いた問題をタップすると色が付きます。仕事と昼休みの時刻は仮置き。祝日・年末年始も平日と同じ問題数で、空いた時間はバッファーです。</div>'+
  '<div class="panel" id="vpanel"></div>';
  v3.addEventListener("click",e=>{
   const w=e.target.closest("[data-w]");if(w){const k=+w.dataset.w;wk=k===0?monday(TODAY<WEEK_MIN?WEEK_MIN:TODAY>WEEK_MAX?WEEK_MAX:TODAY):addDays(wk,7*k);
-   if(wk<WEEK_MIN)wk=WEEK_MIN;if(wk>WEEK_MAX)wk=WEEK_MAX;vrender();scrollToday();return}
+   if(wk<WEEK_MIN)wk=WEEK_MIN;if(wk>WEEK_MAX)wk=WEEK_MAX;closeSheet();vrender();scrollToday();return}
+  const vb=e.target.closest("[data-vb]");if(vb){sel=vb.dataset.vb.split("|")[0];panel();cells();vsel();openSheet(vb.dataset.vb);return}
   const b=e.target.closest("[data-vd]");if(b){sel=b.dataset.vd;panel();cells();vsel();return}
   onPanelClick(e)});
- vrender();scrollToday()}
+ vrender();scrollToday();
+ const wr=v3.querySelector(".vt-wrap"),px=v3.querySelector(".vcol").offsetHeight/24,nw=new Date();
+ const h0=(wk<=TODAY&&TODAY<=addDays(wk,6))?Math.max(0,Math.min(nw.getHours()-1.5,17)):6;wr.scrollTop=Math.max(0,h0*px)}
+/* ---- block sheet ---- */
+let sheetKey=null;const sheet=document.createElement("div");sheet.className="sheet";sheet.hidden=true;sheet.setAttribute("role","dialog");document.body.appendChild(sheet);
+const hm=m=>Math.floor(m/60)+":"+pad(m%60);
+function openSheet(k){sheetKey=k;renderSheet();vrender()}
+function closeSheet(){if(sheetKey===null)return;sheetKey=null;sheet.hidden=true;vrender()}
+function renderSheet(){if(sheetKey===null){sheet.hidden=true;return}
+ const[s,i]=sheetKey.split("|"),b=routine(s).B[+i];if(!b){closeSheet();return}
+ const d=dOf(s);let h='<div class="in"><div class="sh-h"><b>'+(d.getMonth()+1)+'/'+d.getDate()+'（'+WD[d.getDay()]+'）'+esc(b.k)+(b.qs?'・'+rtext(b.qs).r:'')+'</b>'+
+ '<span style="font-size:11px;color:var(--ink-60)">'+hm(b.a)+'–'+hm(b.b)+'</span><button class="x" data-x="1">閉じる</button></div>';
+ if(b.qs){const n=nDone(b.qs);
+  h+='<div class="sh-s">'+(b.type==="gap"?"隙間":"机")+'<span class="lc'+(n>=b.qs.length?' full':'')+'">'+n+'/'+b.qs.length+'</span><button class="all" data-sall="1">全部</button></div><div class="chips">';
+  let cur=null;b.qs.forEach(p=>{const v=D.vol[p.vol],tg=p.r+'周目　'+MARU[p.vol-1]+v.name+(p.sec?' '+p.sec:''),on=ck.has(p.key);
+   if(tg!==cur){h+='<div class="secmark">'+tg+'</div>';cur=tg}
+   h+='<button class="chip" role="checkbox" aria-checked="'+on+'" data-k="'+p.key+'"'+(on?' style="background:'+v.color+'"':'')+'>'+p.q+'</button>'});
+  h+='</div>'}
+ else if(b.eid){const e=D.events.find(e=>e.id===b.eid);h+=evRow(e)}
+ sheet.innerHTML=h+'</div>';sheet.hidden=false}
+sheet.addEventListener("click",e=>{
+ if(e.target.closest("[data-x]")){closeSheet();return}
+ const c=e.target.closest(".chip");if(c){const k=c.dataset.k;ck.has(k)?ck.delete(k):ck.add(k);save();render();return}
+ if(e.target.closest("[data-sall]")){const[s,i]=sheetKey.split("|"),b=routine(s).B[+i];const all=b.qs.every(p=>ck.has(p.key));b.qs.forEach(p=>all?ck.delete(p.key):ck.add(p.key));save();render();return}
+ const t=e.target.closest("[data-e]");if(t){const k=t.dataset.e;ev.has(k)?ev.delete(k):ev.add(k);save();render()}});
 function scrollToday(){const wr=v3.querySelector(".vt-wrap");if(!wr)return;const i=[...Array(7)].map((_,i)=>addDays(wk,i)).indexOf(sel&&sel>=wk&&sel<=addDays(wk,6)?sel:TODAY);
  if(i<0){wr.scrollLeft=0;return}const colW=(wr.scrollWidth-30)/7;wr.scrollLeft=Math.max(0,30+colW*i-wr.clientWidth/2+colW/2)}
 /* ---- render / tabs / io ---- */
-function render(){rounds();panel();paintAll();cells();vrender()}
+function render(){rounds();panel();paintAll();cells();vrender();renderSheet()}
 const tb=[...document.querySelectorAll(".tabs button")],vw=[v0,v1,v2,v3];
-tb.forEach((b,i)=>b.onclick=()=>{if(i===1)build1();if(i===2)build2();
+tb.forEach((b,i)=>b.onclick=()=>{if(i!==3)closeSheet();if(i===1)build1();if(i===2)build2();
  tb.forEach((x,j)=>x.setAttribute("aria-selected",i===j));vw.forEach((v,j)=>v.classList.toggle("on",i===j));if(i===3)build3()});
 document.getElementById("exp").onclick=async()=>{const s=JSON.stringify({p:[...ck],e:[...ev]});
  try{await navigator.clipboard.writeText(s);st.textContent="記録をコピーしました。"}catch(e){prompt("控えておいてください",s)}};
